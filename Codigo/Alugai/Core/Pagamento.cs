@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Persistence
+namespace Core
 {
     public partial class Pagamento
     {

@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Persistence
-{
+namespace Core
+{ 
     public partial class Aluguelimovel
     {
         public int CodigoAluguel { get; set; }
