@@ -75,7 +75,7 @@ namespace AlugaiWEB.Controllers
             if (ModelState.IsValid)
             {
                 var pessoa = _mapper.Map<Pessoa>(pessoaModel);
-                _pessoaService.Inserir(pessoa);
+                _pessoaService.Alterar(pessoa);
             }
             return RedirectToAction(nameof(Index));
         }
