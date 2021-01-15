@@ -25,7 +25,7 @@ namespace Core
         public virtual DbSet<Pessoa> Pessoa { get; set; }
         public virtual DbSet<Pessoaaluguel> Pessoaaluguel { get; set; }
         public virtual DbSet<Statusimovel> Statusimovel { get; set; }
-        public virtual DbSet<Statusmanuntencao> Statusmanuntencao { get; set; }
+     //   public virtual DbSet<Statusmanuntencao> Statusmanuntencao { get; set; }
         public virtual DbSet<Statuspagamento> Statuspagamento { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -186,8 +186,8 @@ namespace Core
                     .HasName("codigo_imovel_UNIQUE")
                     .IsUnique();
 
-                entity.HasIndex(e => e.StatusImovelCodigoStatusImovel)
-                    .HasName("fk_Imovel_StatusImovel1_idx");
+            /*    entity.HasIndex(e => e.StatusImovelCodigoStatusImovel)
+                    .HasName("fk_Imovel_StatusImovel1_idx"); */
 
                 entity.Property(e => e.CodigoImovel).HasColumnName("codigoImovel");
 
@@ -254,7 +254,14 @@ namespace Core
                     .HasMaxLength(100)
                     .IsUnicode(false);
 
-                entity.Property(e => e.StatusImovelCodigoStatusImovel).HasColumnName("StatusImovel_codigoStatusImovel");
+                entity.Property(e => e.Status)
+                   .IsRequired()
+                   .HasColumnName("status")
+                   .HasMaxLength(45)
+                   .IsUnicode(false);
+
+
+                // entity.Property(e => e.StatusImovelCodigoStatusImovel).HasColumnName("StatusImovel_codigoStatusImovel");
 
                 entity.Property(e => e.TipoImovel)
                     .IsRequired()
@@ -267,11 +274,11 @@ namespace Core
 
                 entity.Property(e => e.ValorDoIptu).HasColumnName("valorDoIptu");
 
-                entity.HasOne(d => d.StatusImovelCodigoStatusImovelNavigation)
+             /*   entity.HasOne(d => d.StatusImovelCodigoStatusImovelNavigation)
                     .WithMany(p => p.Imovel)
                     .HasForeignKey(d => d.StatusImovelCodigoStatusImovel)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("fk_Imovel_StatusImovel1");
+                    .HasConstraintName("fk_Imovel_StatusImovel1"); */
             });
 
             modelBuilder.Entity<Manuntencao>(entity =>
@@ -291,8 +298,8 @@ namespace Core
                 entity.HasIndex(e => e.CodigoPessoa)
                     .HasName("fk_tbManuntencao_tbPessoa1_idx");
 
-                entity.HasIndex(e => e.StatusManuntencaoCodigoStatusManuntencao)
-                    .HasName("fk_Manuntencao_StatusManuntencao1_idx");
+               // entity.HasIndex(e => e.StatusManuntencaoCodigoStatusManuntencao)
+                 //   .HasName("fk_Manuntencao_StatusManuntencao1_idx");
 
                 entity.Property(e => e.CodigoManuntencao).HasColumnName("codigoManuntencao");
 
@@ -318,7 +325,7 @@ namespace Core
                     .HasMaxLength(25)
                     .IsUnicode(false);
 
-                entity.Property(e => e.StatusManuntencaoCodigoStatusManuntencao).HasColumnName("StatusManuntencao_codigoStatusManuntencao");
+             //  entity.Property(e => e.StatusManuntencaoCodigoStatusManuntencao).HasColumnName("StatusManuntencao_codigoStatusManuntencao");
 
                 entity.Property(e => e.TipoDeManuntencao)
                     .IsRequired()
@@ -340,11 +347,11 @@ namespace Core
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("fk_tbManuntencao_tbPessoa1");
 
-                entity.HasOne(d => d.StatusManuntencaoCodigoStatusManuntencaoNavigation)
+           /*     entity.HasOne(d => d.StatusManuntencaoCodigoStatusManuntencaoNavigation)
                     .WithMany(p => p.Manuntencao)
                     .HasForeignKey(d => d.StatusManuntencaoCodigoStatusManuntencao)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("fk_Manuntencao_StatusManuntencao1");
+                    .HasConstraintName("fk_Manuntencao_StatusManuntencao1"); */
             });
 
             modelBuilder.Entity<Pagamento>(entity =>
@@ -532,21 +539,6 @@ namespace Core
                     .IsUnicode(false);
             });
 
-            modelBuilder.Entity<Statusmanuntencao>(entity =>
-            {
-                entity.HasKey(e => e.CodigoStatusManuntencao)
-                    .HasName("PRIMARY");
-
-                entity.ToTable("statusmanuntencao");
-
-                entity.Property(e => e.CodigoStatusManuntencao).HasColumnName("codigoStatusManuntencao");
-
-                entity.Property(e => e.Descricao)
-                    .IsRequired()
-                    .HasColumnName("descricao")
-                    .HasMaxLength(15)
-                    .IsUnicode(false);
-            });
 
             modelBuilder.Entity<Statuspagamento>(entity =>
             {

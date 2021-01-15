@@ -34,7 +34,11 @@ namespace AlugaiWEB
                  options.UseMySQL(
                      Configuration.GetConnectionString("AlugaiDataBase")));
 
+
+
             services.AddTransient<IPessoaService, PessoaService>();
+
+            services.AddTransient<ISolicotacaoManutencaoService, SolicitacaoManutencaoService>();
 
             services.AddAutoMapper(typeof(Startup).Assembly);
         }

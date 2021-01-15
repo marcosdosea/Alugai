@@ -34,9 +34,11 @@ namespace Core
         public int Numero { get; set; }
         public string ComplementoEndereco { get; set; }
         public string Cep { get; set; }
-        public int StatusImovelCodigoStatusImovel { get; set; }
 
-        public virtual Statusimovel StatusImovelCodigoStatusImovelNavigation { get; set; }
+        public string Status { get; set; }
+        //   public int StatusImovelCodigoStatusImovel { get; set; }
+
+        //  public virtual Statusimovel StatusImovelCodigoStatusImovelNavigation { get; set; }
         public virtual ICollection<Aluguelimovel> Aluguelimovel { get; set; }
         public virtual ICollection<Anuncio> Anuncio { get; set; }
         public virtual ICollection<Despesas> Despesas { get; set; }

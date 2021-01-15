@@ -13,10 +13,10 @@ namespace Core
         public string ComodoImovel { get; set; }
         public int CodigoPessoa { get; set; }
         public int CodigoImovel { get; set; }
-        public int StatusManuntencaoCodigoStatusManuntencao { get; set; }
+       // public int StatusManuntencaoCodigoStatusManuntencao { get; set; }
 
         public virtual Imovel CodigoImovelNavigation { get; set; }
         public virtual Pessoa CodigoPessoaNavigation { get; set; }
-        public virtual Statusmanuntencao StatusManuntencaoCodigoStatusManuntencaoNavigation { get; set; }
+      //  public virtual Statusmanuntencao StatusManuntencaoCodigoStatusManuntencaoNavigation { get; set; }
     }
 }
