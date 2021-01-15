@@ -1,9 +1,14 @@
+using AutoMapper;
+using Core;
+using Core.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Service;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,6 +29,14 @@ namespace AlugaiWEB
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+            services.AddDbContext<alugaiContext>(options =>
+                 options.UseMySQL(
+                     Configuration.GetConnectionString("AlugaiDataBase")));
+
+            services.AddTransient<IPessoaService, PessoaService>();
+
+            services.AddAutoMapper(typeof(Startup).Assembly);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
