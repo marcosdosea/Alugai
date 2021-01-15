@@ -1,0 +1,69 @@
+﻿@model AlugaiWEB.Models.SolicitacaoManuntecaoModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>SolicitacaoManuntecaoModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="CodigoManuntencao" class="control-label"></label>
+                <input asp-for="CodigoManuntencao" class="form-control" />
+                <span asp-validation-for="CodigoManuntencao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TipoDeManuntencao" class="control-label"></label>
+                <input asp-for="TipoDeManuntencao" class="form-control" />
+                <span asp-validation-for="TipoDeManuntencao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Descricao" class="control-label"></label>
+                <input asp-for="Descricao" class="form-control" />
+                <span asp-validation-for="Descricao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Valor" class="control-label"></label>
+                <input asp-for="Valor" class="form-control" />
+                <span asp-validation-for="Valor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StatusManuntencao" class="control-label"></label>
+                <input asp-for="StatusManuntencao" class="form-control" />
+                <span asp-validation-for="StatusManuntencao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ComodoImovel" class="control-label"></label>
+                <input asp-for="ComodoImovel" class="form-control" />
+                <span asp-validation-for="ComodoImovel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CodigoPessoa" class="control-label"></label>
+                <input asp-for="CodigoPessoa" class="form-control" />
+                <span asp-validation-for="CodigoPessoa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CodigoImovel" class="control-label"></label>
+                <input asp-for="CodigoImovel" class="form-control" />
+                <span asp-validation-for="CodigoImovel" class="text-danger"></span>
+            </div>
+          
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
