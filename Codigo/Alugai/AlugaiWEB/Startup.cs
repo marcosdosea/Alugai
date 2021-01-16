@@ -40,6 +40,8 @@ namespace AlugaiWEB
 
             services.AddTransient<ISolicotacaoManutencaoService, SolicitacaoManutencaoService>();
 
+            services.AddTransient<IImovelService, ImovelService>();
+
             services.AddAutoMapper(typeof(Startup).Assembly);
         }
 
