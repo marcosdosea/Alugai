@@ -24,7 +24,7 @@ namespace AlugaiWEB.Controllers
 
         public ActionResult Index()
         {
-            IEnumerable<Imovel> listarImoveis = _imovelService.ObterTodos();
+            var listarImoveis = _imovelService.ObterTodos();
             var listarImoveisModel = _mapper.Map<List<ImovelModel>>(listarImoveis);
 
             return View(listarImoveisModel);
@@ -45,7 +45,7 @@ namespace AlugaiWEB.Controllers
             return View();
         }
 
-        // POST: ImovelController/Create
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(ImovelModel imovelModel)
@@ -87,7 +87,7 @@ namespace AlugaiWEB.Controllers
             return View(imovelModel);
         }
 
-        // POST: ImovelController/Delete/5
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Delete(int id, ImovelModel imovelModel)
