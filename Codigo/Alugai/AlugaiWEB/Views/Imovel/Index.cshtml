@@ -1,0 +1,162 @@
+﻿@model IEnumerable<AlugaiWEB.Models.ImovelModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CodigoImovel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TipoImovel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.QuantidadeDeQuartos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.QuantidadeDeBanheiros)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.QuantidadeDeSuites)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AreaQuadrada)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.QuantidadeDeAndares)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.QuantidadeDeGaragem)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descricao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ValorDoAluguel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ValorDoCondominio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ValorDoIptu)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.QuantidadeCozinha)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.QuantidadeDeSala)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Bairro)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cidade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EstadoUf)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Rua)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Numero)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ComplementoEndereco)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cep)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CodigoImovel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TipoImovel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QuantidadeDeQuartos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QuantidadeDeBanheiros)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QuantidadeDeSuites)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AreaQuadrada)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QuantidadeDeAndares)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QuantidadeDeGaragem)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descricao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ValorDoAluguel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ValorDoCondominio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ValorDoIptu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QuantidadeCozinha)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QuantidadeDeSala)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Bairro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cidade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EstadoUf)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rua)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Numero)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ComplementoEndereco)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cep)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.CodigoImovel }) |
+                @Html.ActionLink("Details", "Details", new { id=item.CodigoImovel }) |
+                @Html.ActionLink("Delete", "Delete", new {  id=item.CodigoImovel }) 
+
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
