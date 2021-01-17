@@ -24,7 +24,7 @@ namespace Core
         public virtual DbSet<Pagamento> Pagamento { get; set; }
         public virtual DbSet<Pessoa> Pessoa { get; set; }
         public virtual DbSet<Pessoaaluguel> Pessoaaluguel { get; set; }
-        public virtual DbSet<Statusimovel> Statusimovel { get; set; }
+      //  public virtual DbSet<Statusimovel> Statusimovel { get; set; }
      //   public virtual DbSet<Statusmanuntencao> Statusmanuntencao { get; set; }
         public virtual DbSet<Statuspagamento> Statuspagamento { get; set; }
 
@@ -523,7 +523,7 @@ namespace Core
                     .HasConstraintName("fk_tbPessoa_has_tb_aluguel_tbPessoa1");
             });
 
-            modelBuilder.Entity<Statusimovel>(entity =>
+        /*    modelBuilder.Entity<Statusimovel>(entity =>
             {
                 entity.HasKey(e => e.CodigoStatusImovel)
                     .HasName("PRIMARY");
@@ -537,7 +537,7 @@ namespace Core
                     .HasColumnName("descricao")
                     .HasMaxLength(15)
                     .IsUnicode(false);
-            });
+            });*/
 
 
             modelBuilder.Entity<Statuspagamento>(entity =>
