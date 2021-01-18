@@ -89,7 +89,7 @@ namespace AlugaiWEB.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, PagamentoModelcs pagaModel)
+        public ActionResult Delete(int id, PagamentoModelcs pagamentoModel)
         {
             _pagamentoService.Excluir(id);
             return RedirectToAction(nameof(Index));
