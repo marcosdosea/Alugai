@@ -39,7 +39,7 @@ namespace Service
         }
         public Aluguel Buscar(int codigoAluguel)
         {
-            IEnumerable<Aluguel> alugueis = GetQuery().Where(imovelModel => aluguelModel.codigoAluguel.Equals(codigoAluguel));
+            IEnumerable<Aluguel> alugueis = GetQuery().Where(aluguelModel => aluguelModel.CodigoAluguel.Equals(codigoAluguel));
             return alugueis.ElementAtOrDefault(0);
         }
         public IEnumerable<Aluguel> ObterTodos()
