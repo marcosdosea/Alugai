@@ -7,7 +7,7 @@ namespace Core.Services
         int Inserir(Aluguel aluguel);
         void Alterar(Aluguel aluguel);
         void Excluir(int codigoAluguel);
-        Imovel Buscar(int codigoAluguel);
+        Aluguel Buscar(int codigoAluguel);
         IEnumerable<Aluguel> ObterTodos();
     }
 }
