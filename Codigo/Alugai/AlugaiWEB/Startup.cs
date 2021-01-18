@@ -35,12 +35,13 @@ namespace AlugaiWEB
                      Configuration.GetConnectionString("AlugaiDataBase")));
 
 
-
             services.AddTransient<IPessoaService, PessoaService>();
 
             services.AddTransient<ISolicotacaoManutencaoService, SolicitacaoManutencaoService>();
 
             services.AddTransient<IImovelService, ImovelService>();
+
+            services.AddTransient<IAluguelService, AluguelService>();
 
             services.AddAutoMapper(typeof(Startup).Assembly);
         }

@@ -1,0 +1,47 @@
+﻿@model IEnumerable<AlugaiWEB.Models.AluguelModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CodigoAluguel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descricao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CodigoStatusPagamento)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CodigoAluguel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descricao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CodigoStatusPagamento)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new {  id=item.CodigoAluguel }) |
+                @Html.ActionLink("Details", "Details", new { id=item.CodigoAluguel }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.CodigoAluguel })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
