@@ -42,6 +42,8 @@ namespace AlugaiWEB
 
             services.AddTransient<IImovelService, ImovelService>();
 
+            services.AddTransient<IPagamentoService, PagamentoService>();
+
             services.AddAutoMapper(typeof(Startup).Assembly);
         }
 
