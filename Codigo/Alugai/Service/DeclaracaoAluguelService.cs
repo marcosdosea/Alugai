@@ -7,7 +7,7 @@ using System.Linq;
 
 namespace Service
 {
-    class DeclaracaoAluguelService : IDeclaracaoAluguelService
+    public class DeclaracaoAluguelService : IDeclaracaoAluguelService
     {
         private readonly alugaiContext _context;
 
