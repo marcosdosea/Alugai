@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace Service
 {
-    class AluguelService : IAluguelService
+    public class AluguelService : IAluguelService
     {
         private readonly alugaiContext _context;
 
