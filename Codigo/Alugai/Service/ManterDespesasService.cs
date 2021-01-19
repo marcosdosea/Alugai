@@ -40,7 +40,7 @@ namespace Service
         }
         public Despesas Buscar(int codigoDespesas)
         {
-            IEnumerable<Despesas> despesas= GetQuery().Where(DespesasModel => despesasModel.CodigoDespesas.Equals(codigoDespesas));
+            IEnumerable<Despesas> despesas= GetQuery().Where(despesasModel => despesasModel.CodigoDespesas.Equals(codigoDespesas));
             return despesas.ElementAtOrDefault(0);
         }
         public IEnumerable<Despesas> ObterTodos()
