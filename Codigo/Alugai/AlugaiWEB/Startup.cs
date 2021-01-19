@@ -50,7 +50,9 @@ namespace AlugaiWEB
             services.AddTransient<IStatuspagamentoService, StatuspagamentoService>();
 
             services.AddTransient<IAnuncioService, AnuncioService>();
-            
+
+            services.AddTransient<IManterDespesasService, ManterDespesasService>();
+
             services.AddAutoMapper(typeof(Startup).Assembly);
         }
 

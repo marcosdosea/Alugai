@@ -1,0 +1,48 @@
+﻿@model AlugaiWEB.Models.DespesasModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>DespesasModel</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CodigoDespesa)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CodigoDespesa)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DescricaoDespesa)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DescricaoDespesa)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TipoDeAnuncio)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TipoDeAnuncio)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Valor)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Valor)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CodigoImovel)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CodigoImovel)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new {  id = Model.CodigoDespesa }) |
+    <a asp-action="Index">Back to List</a>
+</div>
