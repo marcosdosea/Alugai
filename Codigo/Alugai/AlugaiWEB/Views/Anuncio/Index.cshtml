@@ -1,0 +1,59 @@
+﻿@model IEnumerable<AlugaiWEB.Models.AnuncioModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CodigoAnuncio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descricao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TipoDeAnuncio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CodigoImovel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CodigoPessoa)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CodigoAnuncio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descricao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TipoDeAnuncio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CodigoImovel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CodigoPessoa)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new {  id=item.CodigoAnuncio}) |
+                @Html.ActionLink("Details", "Details", new {  id=item.CodigoAnuncio}) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.CodigoAnuncio })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
