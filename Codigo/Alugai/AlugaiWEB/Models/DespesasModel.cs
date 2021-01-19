@@ -21,7 +21,7 @@ namespace AlugaiWEB.Models
         [Display(Name = "Tipo De Despesa")]
         [StringLength(45, MinimumLength = 3, ErrorMessage = "Tipo De Despesa deve conter entre 3 e 45 caracteres")]
         [Required(ErrorMessage = "Campo Obrigatório")]
-        public string TipoDeAnuncio { get; set; }
+        public string TipoDespesa { get; set; }
 
         [Display(Name = "Valor")]
         [Required(ErrorMessage = "Valor é Obrigatório")]
