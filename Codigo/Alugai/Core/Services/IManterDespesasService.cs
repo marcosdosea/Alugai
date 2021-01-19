@@ -2,7 +2,7 @@
 
 namespace Core.Services
 {
-    public interface IManterDespesas
+    public interface IManterDespesasService
     {
         int Inserir(Despesas despesas);
         void Alterar(Despesas despesas);
