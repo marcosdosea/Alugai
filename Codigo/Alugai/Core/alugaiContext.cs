@@ -24,13 +24,17 @@ namespace Core
         public virtual DbSet<Pagamento> Pagamento { get; set; }
         public virtual DbSet<Pessoa> Pessoa { get; set; }
         public virtual DbSet<Pessoaaluguel> Pessoaaluguel { get; set; }
-      //  public virtual DbSet<Statusimovel> Statusimovel { get; set; }
-     //   public virtual DbSet<Statusmanuntencao> Statusmanuntencao { get; set; }
+        public virtual DbSet<Statusimovel> Statusimovel { get; set; }
+        public virtual DbSet<Statusmanutencao> Statusmanutencao { get; set; }
         public virtual DbSet<Statuspagamento> Statuspagamento { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-          
+            if (!optionsBuilder.IsConfigured)
+            {
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
+                optionsBuilder.UseMySQL("server=localhost;port=3306;user=root;password=123456;database=alugai");
+            }
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -186,8 +190,8 @@ namespace Core
                     .HasName("codigo_imovel_UNIQUE")
                     .IsUnique();
 
-            /*    entity.HasIndex(e => e.StatusImovelCodigoStatusImovel)
-                    .HasName("fk_Imovel_StatusImovel1_idx"); */
+                entity.HasIndex(e => e.StatusImovel)
+                    .HasName("fk_Imovel_StatusImovel1_idx");
 
                 entity.Property(e => e.CodigoImovel).HasColumnName("codigoImovel");
 
@@ -240,11 +244,7 @@ namespace Core
 
                 entity.Property(e => e.QuantidadeDeQuartos).HasColumnName("quantidadeDeQuartos");
 
-                entity.Property(e => e.QuantidadeDeSala)
-                    .IsRequired()
-                    .HasColumnName("quantidadeDeSala")
-                    .HasMaxLength(45)
-                    .IsUnicode(false);
+                entity.Property(e => e.QuantidadeDeSala).HasColumnName("quantidadeDeSala");
 
                 entity.Property(e => e.QuantidadeDeSuites).HasColumnName("quantidadeDeSuites");
 
@@ -254,14 +254,7 @@ namespace Core
                     .HasMaxLength(100)
                     .IsUnicode(false);
 
-                entity.Property(e => e.Status)
-                   .IsRequired()
-                   .HasColumnName("status")
-                   .HasMaxLength(45)
-                   .IsUnicode(false);
-
-
-                // entity.Property(e => e.StatusImovelCodigoStatusImovel).HasColumnName("StatusImovel_codigoStatusImovel");
+                entity.Property(e => e.StatusImovel).HasColumnName("statusImovel");
 
                 entity.Property(e => e.TipoImovel)
                     .IsRequired()
@@ -274,11 +267,11 @@ namespace Core
 
                 entity.Property(e => e.ValorDoIptu).HasColumnName("valorDoIptu");
 
-             /*   entity.HasOne(d => d.StatusImovelCodigoStatusImovelNavigation)
+                entity.HasOne(d => d.StatusImovelNavigation)
                     .WithMany(p => p.Imovel)
-                    .HasForeignKey(d => d.StatusImovelCodigoStatusImovel)
+                    .HasForeignKey(d => d.StatusImovel)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("fk_Imovel_StatusImovel1"); */
+                    .HasConstraintName("fk_Imovel_StatusImovel1");
             });
 
             modelBuilder.Entity<Manuntencao>(entity =>
@@ -298,8 +291,8 @@ namespace Core
                 entity.HasIndex(e => e.CodigoPessoa)
                     .HasName("fk_tbManuntencao_tbPessoa1_idx");
 
-               // entity.HasIndex(e => e.StatusManuntencaoCodigoStatusManuntencao)
-                 //   .HasName("fk_Manuntencao_StatusManuntencao1_idx");
+                entity.HasIndex(e => e.StatusManutencao)
+                    .HasName("fk_Manuntencao_StatusManutencao1_idx");
 
                 entity.Property(e => e.CodigoManuntencao).HasColumnName("codigoManuntencao");
 
@@ -319,13 +312,7 @@ namespace Core
                     .HasMaxLength(250)
                     .IsUnicode(false);
 
-                entity.Property(e => e.StatusManuntencao)
-                    .IsRequired()
-                    .HasColumnName("statusManuntencao")
-                    .HasMaxLength(25)
-                    .IsUnicode(false);
-
-             //  entity.Property(e => e.StatusManuntencaoCodigoStatusManuntencao).HasColumnName("StatusManuntencao_codigoStatusManuntencao");
+                entity.Property(e => e.StatusManutencao).HasColumnName("statusManutencao");
 
                 entity.Property(e => e.TipoDeManuntencao)
                     .IsRequired()
@@ -347,11 +334,11 @@ namespace Core
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("fk_tbManuntencao_tbPessoa1");
 
-           /*     entity.HasOne(d => d.StatusManuntencaoCodigoStatusManuntencaoNavigation)
+                entity.HasOne(d => d.StatusManutencaoNavigation)
                     .WithMany(p => p.Manuntencao)
-                    .HasForeignKey(d => d.StatusManuntencaoCodigoStatusManuntencao)
+                    .HasForeignKey(d => d.StatusManutencao)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("fk_Manuntencao_StatusManuntencao1"); */
+                    .HasConstraintName("fk_Manuntencao_StatusManutencao1");
             });
 
             modelBuilder.Entity<Pagamento>(entity =>
@@ -402,9 +389,6 @@ namespace Core
                     .HasName("codigo_UNIQUE")
                     .IsUnique();
 
-                entity.HasIndex(e => e.CodigoTipoPessoa)
-                    .HasName("fk_tbPessoa_tbTipoPessoa1_idx");
-
                 entity.Property(e => e.CodigoPessoa).HasColumnName("codigoPessoa");
 
                 entity.Property(e => e.Bairro)
@@ -424,8 +408,6 @@ namespace Core
                     .HasColumnName("cidade")
                     .HasMaxLength(30)
                     .IsUnicode(false);
-
-                entity.Property(e => e.CodigoTipoPessoa).HasColumnName("codigoTipoPessoa");
 
                 entity.Property(e => e.Cpf)
                     .IsRequired()
@@ -485,12 +467,6 @@ namespace Core
                     .HasColumnName("telefone")
                     .HasMaxLength(20)
                     .IsUnicode(false);
-
-                entity.Property(e => e.CodigoTipoPessoa)
-                    .IsRequired()
-                    .HasColumnName("TipoPessoa")
-                    .HasMaxLength(20)
-                    .IsUnicode(false);
             });
 
             modelBuilder.Entity<Pessoaaluguel>(entity =>
@@ -523,7 +499,7 @@ namespace Core
                     .HasConstraintName("fk_tbPessoa_has_tb_aluguel_tbPessoa1");
             });
 
-        /*    modelBuilder.Entity<Statusimovel>(entity =>
+            modelBuilder.Entity<Statusimovel>(entity =>
             {
                 entity.HasKey(e => e.CodigoStatusImovel)
                     .HasName("PRIMARY");
@@ -532,13 +508,28 @@ namespace Core
 
                 entity.Property(e => e.CodigoStatusImovel).HasColumnName("codigoStatusImovel");
 
-                entity.Property(e => e.Descricao)
+                entity.Property(e => e.StatusImovel1)
                     .IsRequired()
-                    .HasColumnName("descricao")
-                    .HasMaxLength(15)
+                    .HasColumnName("StatusImovel")
+                    .HasMaxLength(45)
                     .IsUnicode(false);
-            });*/
+            });
 
+            modelBuilder.Entity<Statusmanutencao>(entity =>
+            {
+                entity.HasKey(e => e.CodigoStatusManutencao)
+                    .HasName("PRIMARY");
+
+                entity.ToTable("statusmanutencao");
+
+                entity.Property(e => e.CodigoStatusManutencao).HasColumnName("codigoStatusManutencao");
+
+                entity.Property(e => e.StatusManutencao1)
+                    .IsRequired()
+                    .HasColumnName("statusManutencao")
+                    .HasMaxLength(45)
+                    .IsUnicode(false);
+            });
 
             modelBuilder.Entity<Statuspagamento>(entity =>
             {
@@ -555,7 +546,6 @@ namespace Core
                     .HasMaxLength(15)
                     .IsUnicode(false);
             });
-
 
             OnModelCreatingPartial(modelBuilder);
         }
