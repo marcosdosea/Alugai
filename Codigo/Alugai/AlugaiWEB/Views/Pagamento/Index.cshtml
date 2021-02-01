@@ -4,62 +4,98 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Pagamentos</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Criar Pagamento</a>
 </p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.CodigoPagamento)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DataPagamento)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Valor)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DataVencimento)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.FormaDePagamento)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CodigoAluguel)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.CodigoPagamento)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DataPagamento)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Valor)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DataVencimento)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FormaDePagamento)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CodigoAluguel)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<body>
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row py-3">
+                <div class="col-lg-3 col-sm-3 mr-auto" id="sticky-sidebar">
+                    <div class="sticky-top">
+                        <div class="bg-light border-right" id="sidebar-wrapper">
+                            <div class="list-group list-group-flush">
+                                <a class="list-group-item list-group-item-action bg-light" asp-controller="Minha Conta" asp-action="Index">Minha Conta</a>
+                                <a class="list-group-item list-group-item-action bg-light" asp-controller="Resumo" asp-action="Index">Resumo</a>
+                                <a class="list-group-item list-group-item-action bg-light" asp-controller="Meus Dados" asp-action="Index">Meus Dados</a>
+                                <a class="list-group-item list-group-item-action bg-light" asp-controller="Meus Imoveis" asp-action="Index">Meus Imoveis</a>
+                                <a class="list-group-item list-group-item-action bg-light" asp-controller="Meus Alugueis" asp-action="Index">Meus Alugueis</a>
+                                <a class="list-group-item list-group-item-action bg-light" asp-controller="Configuração" asp-action="Index">Configurações</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-9 col-sm-8 ml-auto" id="main">
+
+                        <!-- Tab panes -->
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.CodigoPagamento)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.DataPagamento)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Valor)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.DataVencimento)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.FormaDePagamento)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.CodigoAluguel)
+                                    </th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.CodigoPagamento)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.DataPagamento)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Valor)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.DataVencimento)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.FormaDePagamento)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.CodigoAluguel)
+                                        </td>
+                                        <td>
+                                            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                                            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                                            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
