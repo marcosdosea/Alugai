@@ -83,6 +83,6 @@ namespace AlugaiWEB.Models
 
         [Display(Name = "Tipo Pessoa")]
         [Required(ErrorMessage = "Campo Obrigatório")]
-        public int CodigoTipoPessoa { get; set; }
+        public int TipoPessoa { get; set; }
     }
 }

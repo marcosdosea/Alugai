@@ -39,7 +39,7 @@ namespace AlugaiWEB.Models
         public int? QuantidadeDeGaragem { get; set; }
 
         [Display(Name = "Descrição do Imovel")]
-        [StringLength(250, MinimumLength = 10, ErrorMessage = "O valor deve ter entre 10 e 250 caracteres!!")]
+        [StringLength(250, MinimumLength = 3, ErrorMessage = "O valor deve ter entre 10 e 250 caracteres!!")]
         [Required(ErrorMessage = "Campo Obrigatório")]
         public string Descricao { get; set; }
 
@@ -58,9 +58,8 @@ namespace AlugaiWEB.Models
         public int QuantidadeCozinha { get; set; }
 
         [Display(Name = "Quantidade de Sala")]
-        [StringLength(45, MinimumLength = 1, ErrorMessage = "O valor deve ter entre 1 e 45 caracteres!!")]
         [Required(ErrorMessage = "Campo Obrigatório")]
-        public string QuantidadeDeSala { get; set; }
+        public int QuantidadeDeSala { get; set; }
 
         [Display(Name = "Bairro")]
         [StringLength(45, MinimumLength = 5, ErrorMessage = "O valor deve ter entre 5 e 45 caracteres!!")]
@@ -78,7 +77,7 @@ namespace AlugaiWEB.Models
         public string EstadoUf { get; set; }
 
         [Display(Name = "Rua")]
-        [StringLength(100, MinimumLength = 10, ErrorMessage = "O valor deve ter entre 10 e 100 caracteres!!")]
+        [StringLength(100, MinimumLength = 3, ErrorMessage = "O valor deve ter entre 10 e 100 caracteres!!")]
         [Required(ErrorMessage = "Campo Obrigatório")]
         public string Rua { get; set; }
 
@@ -95,9 +94,8 @@ namespace AlugaiWEB.Models
         [Required(ErrorMessage = "Campo Obrigatório")]
         public string Cep { get; set; }
 
-        [Display(Name = "Status do Imovel")]
-        [StringLength(45, MinimumLength = 5, ErrorMessage = "O valor deve ter entre 5 e 45 caracteres!!")]
+        [Display(Name = "Status Atual do Imovel")]
         [Required(ErrorMessage = "Campo Obrigatório")]
-        public string Status { get; set; }
+        public int StatusImovel { get; set; }
     }
 }

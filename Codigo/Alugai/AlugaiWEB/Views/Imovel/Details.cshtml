@@ -137,14 +137,14 @@
             @Html.DisplayFor(model => model.Cep)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Status)
+            @Html.DisplayNameFor(model => model.StatusImovel)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Status)
+            @Html.DisplayFor(model => model.StatusImovel)
         </dd>
     </dl>
 </div>
 <div>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.CodigoImovel }) |
+    @Html.ActionLink("Edit", "Edit", new {  id = Model.CodigoImovel  }) |
     <a asp-action="Index">Back to List</a>
 </div>

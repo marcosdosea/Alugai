@@ -27,7 +27,8 @@ namespace Core
         public string Cep { get; set; }
         public string EstadoUf { get; set; }
         public int NumeroDoEndereco { get; set; }
-        public int CodigoTipoPessoa { get; set; }
+        public int? TipoPessoa { get; set; }
+
         public virtual ICollection<Anuncio> Anuncio { get; set; }
         public virtual ICollection<Manuntencao> Manuntencao { get; set; }
         public virtual ICollection<Pessoaaluguel> Pessoaaluguel { get; set; }

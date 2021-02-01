@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 
 namespace Core
-{ 
+{
     public partial class Aluguelimovel
     {
         public int CodigoAluguel { get; set; }

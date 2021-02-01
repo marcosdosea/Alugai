@@ -76,7 +76,7 @@
                 @Html.DisplayNameFor(model => model.Cep)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Status)
+                @Html.DisplayNameFor(model => model.StatusImovel)
             </th>
             <th></th>
         </tr>
@@ -148,13 +148,12 @@
                 @Html.DisplayFor(modelItem => item.Cep)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Status)
+                @Html.DisplayFor(modelItem => item.StatusImovel)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id=item.CodigoImovel }) |
-                @Html.ActionLink("Details", "Details", new { id=item.CodigoImovel }) |
-                @Html.ActionLink("Delete", "Delete", new {  id=item.CodigoImovel }) 
-
+                @Html.ActionLink("Edit", "Edit", new {  id=item.CodigoImovel }) |
+                @Html.ActionLink("Details", "Details", new { id = item.CodigoImovel }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.CodigoImovel })
             </td>
         </tr>
 }
