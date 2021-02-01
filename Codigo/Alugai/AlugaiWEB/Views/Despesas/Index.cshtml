@@ -13,19 +13,16 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.CodigoDespesa)
+                @Html.DisplayNameFor(model => model.CodigoDespesas)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.DescricaoDespesa)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.TipoDespesa)
+                @Html.DisplayNameFor(model => model.TipoDeDespesa)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Valor)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CodigoImovel)
             </th>
             <th></th>
         </tr>
@@ -34,24 +31,21 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.CodigoDespesa)
+                @Html.DisplayFor(modelItem => item.CodigoDespesas)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.DescricaoDespesa)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.TipoDespesa)
+                @Html.DisplayFor(modelItem => item.TipoDeDespesa)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Valor)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.CodigoImovel)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new {  id=item.CodigoDespesa }) |
-                @Html.ActionLink("Details", "Details", new { id=item.CodigoDespesa }) |
-                @Html.ActionLink("Delete", "Delete", new { id=item.CodigoDespesa })
+                @Html.ActionLink("Edit", "Edit", new {  id=item.CodigoDespesas }) |
+                @Html.ActionLink("Details", "Details", new { id=item.CodigoDespesas }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.CodigoDespesas })
             </td>
         </tr>
 }

@@ -11,7 +11,7 @@ namespace AlugaiWEB.Models
         [Display(Name = "Código")]
         [Key]
         [Required(ErrorMessage = "Código é Obrigatório")]
-        public int CodigoDespesa { get; set; }
+        public int CodigoDespesas { get; set; }
 
         [Display(Name = "Descrição")]
         [StringLength(200, MinimumLength = 3, ErrorMessage = "A descrição deve conter entre 3 e 200 caracteres")]
@@ -21,14 +21,16 @@ namespace AlugaiWEB.Models
         [Display(Name = "Tipo De Despesa")]
         [StringLength(45, MinimumLength = 3, ErrorMessage = "Tipo De Despesa deve conter entre 3 e 45 caracteres")]
         [Required(ErrorMessage = "Campo Obrigatório")]
-        public string TipoDespesa { get; set; }
+        public string TipoDeDespesa { get; set; }
 
         [Display(Name = "Valor")]
         [Required(ErrorMessage = "Valor é Obrigatório")]
         public int Valor { get; set; }
 
-        [Display(Name = "Código imóvel")]
-        [Required(ErrorMessage = "Código do imóvel é Obrigatório")]
+        [Display(Name = "Descrição Imóvel")]
+        [Required(ErrorMessage = "Descrição do imóvel é Obrigatório")]
         public int CodigoImovel { get; set; }
+
+        public string Descricao { get; set; }
     }
 }
