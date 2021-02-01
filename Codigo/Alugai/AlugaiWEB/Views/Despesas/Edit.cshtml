@@ -13,9 +13,9 @@
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="CodigoDespesa" class="control-label"></label>
-                <input asp-for="CodigoDespesa" class="form-control" />
-                <span asp-validation-for="CodigoDespesa" class="text-danger"></span>
+                <label asp-for="CodigoDespesas" class="control-label"></label>
+                <input asp-for="CodigoDespesas" class="form-control" />
+                <span asp-validation-for="CodigoDespesas" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="DescricaoDespesa" class="control-label"></label>
@@ -23,9 +23,9 @@
                 <span asp-validation-for="DescricaoDespesa" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="TipoDespesa" class="control-label"></label>
-                <input asp-for="TipoDespesa" class="form-control" />
-                <span asp-validation-for="TipoDespesa" class="text-danger"></span>
+                <label asp-for="TipoDeDespesa" class="control-label"></label>
+                <input asp-for="TipoDeDespesa" class="form-control" />
+                <span asp-validation-for="TipoDeDespesa" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Valor" class="control-label"></label>
@@ -34,7 +34,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="CodigoImovel" class="control-label"></label>
-                <input asp-for="CodigoImovel" class="form-control" />
+                <select asp-for="CodigoImovel" asp-items="ViewBag.IdImovel" class="form-control"></select>
                 <span asp-validation-for="CodigoImovel" class="text-danger"></span>
             </div>
             <div class="form-group">

@@ -3,6 +3,7 @@ using AutoMapper;
 using Core;
 using Core.Services;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Collections.Generic;
 
 namespace AlugaiWEB.Controllers
@@ -12,10 +13,13 @@ namespace AlugaiWEB.Controllers
         // GET: DespesasController
         IManterDespesasService _despesasService;
         IMapper _mapper;
+        IImovelService _imovelService;
 
-        public DespesasController(IManterDespesasService despesasService, IMapper mapper)
+        public DespesasController(IManterDespesasService despesasService, IImovelService imovelService,
+                                  IMapper mapper)
         {
             _despesasService = despesasService;
+            _imovelService = imovelService;
             _mapper = mapper;
         }
 
@@ -37,6 +41,9 @@ namespace AlugaiWEB.Controllers
 
         public ActionResult Create()
         {
+            IEnumerable<Imovel> listarImoveis = _imovelService.ObterTodos();
+            ViewBag.IdImovel = new SelectList(listarImoveis, "CodigoImovel", "Descricao", null);
+
             return View();
         }
 
@@ -56,6 +63,10 @@ namespace AlugaiWEB.Controllers
         {
             Despesas despesas = _despesasService.Buscar(id);
             DespesasModel despesasModel = _mapper.Map<DespesasModel>(despesas);
+
+            IEnumerable<Imovel> listarImoveis = _imovelService.ObterTodos();
+            ViewBag.IdImovel = new SelectList(listarImoveis, "CodigoImovel", "Descricao", null);
+
             return View(despesasModel);
         }
 
