@@ -3,6 +3,7 @@ using AutoMapper;
 using Core;
 using Core.Services;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,11 +14,14 @@ namespace AlugaiWEB.Controllers
     public class PagamentoController : Controller
     {
         IPagamentoService _pagamentoService;
+        IAluguelService _aluguelService;
         IMapper _mapper;
 
-        public PagamentoController(IPagamentoService pagamentoService, IMapper mapper)
+        public PagamentoController(IPagamentoService pagamentoService,
+                                   IAluguelService aluguelService, IMapper mapper)
         {
             _pagamentoService = pagamentoService;
+            _aluguelService = aluguelService;
             _mapper = mapper;
         }
 
@@ -41,6 +45,10 @@ namespace AlugaiWEB.Controllers
 
         public ActionResult Create()
         {
+            IEnumerable<Aluguel> listarAlugueis = _aluguelService.ObterTodos();
+
+            ViewBag.IdAluguel = new SelectList(listarAlugueis, "CodigoAluguel", "Descricao", null);
+
             return View();
         }
 
@@ -62,6 +70,10 @@ namespace AlugaiWEB.Controllers
         {
             Pagamento pagamento = _pagamentoService.Buscar(id);
             PagamentoModelcs pagamentoModel = _mapper.Map<PagamentoModelcs>(pagamento);
+
+            IEnumerable<Aluguel> listarAlugueis = _aluguelService.ObterTodos();
+            ViewBag.IdAluguel = new SelectList(listarAlugueis, "CodigoAluguel", "Descricao", null);
+
             return View(pagamentoModel);
         }
 
