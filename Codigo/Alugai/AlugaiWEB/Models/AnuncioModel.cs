@@ -23,12 +23,12 @@ namespace AlugaiWEB.Models
         [Required(ErrorMessage = "Campo Obrigatório")]
         public string TipoDeAnuncio { get; set; }
 
-        [Display(Name = "Código Imóvel")]
-        [Required(ErrorMessage = "Código do Imóvel é Obrigatório")]
+        [Display(Name = "Imóvel")]
+        [Required(ErrorMessage = "Imóvel é Obrigatório")]
         public int CodigoImovel { get; set; }
 
-        [Display(Name = "Código Pessoa")]
-        [Required(ErrorMessage = "Código da Pessoa é Obrigatório")]
+        [Display(Name = "Pessoa")]
+        [Required(ErrorMessage = "Pessoa é Obrigatório")]
         public int CodigoPessoa { get; set; }
     }
 }
