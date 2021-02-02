@@ -4,6 +4,7 @@ using Core;
 using Core.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,11 +15,16 @@ namespace AlugaiWEB.Controllers
     public class AnuncioController : Controller
     {
         IAnuncioService _anuncioService;
+        IImovelService _imovelService;
+        IPessoaService _pessoaService;
         IMapper _mapper;
 
-        public AnuncioController(IAnuncioService anuncioService, IMapper mapper)
+        public AnuncioController(IAnuncioService anuncioService, IImovelService imovelService,
+                                 IPessoaService pessoaService, IMapper mapper)
         {
             _anuncioService = anuncioService;
+            _imovelService = imovelService;
+            _pessoaService = pessoaService;
             _mapper = mapper;
         }
 
@@ -40,6 +46,12 @@ namespace AlugaiWEB.Controllers
 
         public ActionResult Create()
         {
+            IEnumerable<Imovel> listarImoveis = _imovelService.ObterTodos();
+            IEnumerable<Pessoa> listarPessoas = _pessoaService.ObterTodos();
+
+            ViewBag.IdImovel = new SelectList(listarImoveis, "CodigoImovel", "Descricao", null);
+            ViewBag.IdPessoa = new SelectList(listarPessoas, "CodigoPessoa", "Nome", null);
+
             return View();
         }
 
@@ -59,6 +71,13 @@ namespace AlugaiWEB.Controllers
         {
             Anuncio anuncio = _anuncioService.Buscar(id);
             AnuncioModel anuncioModel = _mapper.Map<AnuncioModel>(anuncio);
+
+            IEnumerable<Imovel> listarImoveis = _imovelService.ObterTodos();
+            IEnumerable<Pessoa> listarPessoas = _pessoaService.ObterTodos();
+
+            ViewBag.IdImovel = new SelectList(listarImoveis, "CodigoImovel", "Descricao", null);
+            ViewBag.IdPessoa = new SelectList(listarPessoas, "CodigoPessoa", "nome", null);
+
             return View(anuncioModel);
         }
 

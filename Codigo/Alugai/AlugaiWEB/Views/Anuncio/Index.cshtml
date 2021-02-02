@@ -21,12 +21,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.TipoDeAnuncio)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CodigoImovel)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CodigoPessoa)
-            </th>
+
             <th></th>
         </tr>
     </thead>
@@ -42,12 +37,7 @@
             <td>
                 @Html.DisplayFor(modelItem => item.TipoDeAnuncio)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CodigoImovel)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CodigoPessoa)
-            </td>
+
             <td>
                 @Html.ActionLink("Edit", "Edit", new {  id=item.CodigoAnuncio}) |
                 @Html.ActionLink("Details", "Details", new {  id=item.CodigoAnuncio}) |
