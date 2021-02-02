@@ -14,8 +14,8 @@ namespace AlugaiWEB.Models
         [Required(ErrorMessage = "Campo Obrigatório")]
         public string Descricao { get; set; }
 
-        [Display(Name = "Código Status Pagamento")]
-        [Required(ErrorMessage = "Código é Obrigatório")]
+        [Display(Name = "Status Pagamento")]
+        [Required(ErrorMessage = "Status Pagamento é Obrigatório")]
         public int CodigoStatusPagamento { get; set; }
 
     }
