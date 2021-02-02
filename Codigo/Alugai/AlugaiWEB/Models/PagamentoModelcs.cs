@@ -31,7 +31,7 @@ namespace AlugaiWEB.Models
         [Required(ErrorMessage = "Campo Obrigatório")]
         public string FormaDePagamento { get; set; }
 
-        [Display(Name = "Codigo Aluguel")]
+        [Display(Name = "Aluguel")]
         [Required(ErrorMessage = "Campo Obrigatório")]
         public int CodigoAluguel { get; set; }
     }
