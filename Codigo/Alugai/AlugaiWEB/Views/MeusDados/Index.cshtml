@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="d-flex" id="wrapper">
+
+    <!-- Sidebar -->
+    <div class="bg-light border-right" id="sidebar-wrapper">
+        <div class="sidebar-heading">Meus Dados</div>
+        <div class="list-group list-group-flush">
+
+            <a class="list-group-item list-group-item-action bg-light" asp-controller="Pessoa" asp-action="Index">Minha Conta</a>
+            <a class="list-group-item list-group-item-action bg-light" asp-controller="Imovel" asp-action="Index">Resumo</a>
+            <a class="list-group-item list-group-item-action bg-light" asp-controller="Pessoa" asp-action="Index">Meus Dados</a>
+            <a class="list-group-item list-group-item-action bg-light" asp-controller="Imovel" asp-action="Index">Meus Imoveis</a>
+            <a class="list-group-item list-group-item-action bg-light" asp-controller="Aluguel" asp-action="Index">Meus Alugueis</a>
+
+        </div>
+    </div>
+
+</div>
+
+<script>
+    $("#menu-toggle").click(function (e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+</script>
