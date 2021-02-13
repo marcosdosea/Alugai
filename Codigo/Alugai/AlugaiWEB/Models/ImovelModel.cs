@@ -4,20 +4,20 @@ namespace AlugaiWEB.Models
 {
     public class ImovelModel
     {
-        [Display(Name = "Codigo Imovel")]
+        [Display(Name = "Código")]
         [Required(ErrorMessage = "Campo Obrigatório")]
         public int CodigoImovel { get; set; }
 
-        [Display(Name = "Tipo do Imovel")]
+        [Display(Name = "Tipo")]
         [StringLength(15, MinimumLength = 4, ErrorMessage = "O valor deve ter entre 4 e 15 caracteres!!")]
         [Required(ErrorMessage = "Campo Obrigatório")]
         public string TipoImovel { get; set; }
 
-        [Display(Name = "Quantidade de Quartos")]
+        [Display(Name = "Quartos")]
         [Required(ErrorMessage = "Campo Obrigatório")]
         public int QuantidadeDeQuartos { get; set; }
 
-        [Display(Name = "Quantidade de Banheiros")]
+        [Display(Name = "Banheiros")]
         [Required(ErrorMessage = "Campo Obrigatório")]
         public int QuantidadeDeBanheiros { get; set; }
 
@@ -39,7 +39,7 @@ namespace AlugaiWEB.Models
         [Required(ErrorMessage = "Campo Obrigatório")]
         public string Descricao { get; set; }
 
-        [Display(Name = "Valor do Aluguel")]
+        [Display(Name = "Preço")]
         [Required(ErrorMessage = "Campo Obrigatório")]
         public double ValorDoAluguel { get; set; }
 
