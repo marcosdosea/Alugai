@@ -69,7 +69,7 @@ namespace AlugaiWEB.Models
         [Required(ErrorMessage = "Campo Obrigatório")]
         public string Cep { get; set; }
 
-        [Display(Name = "Estado UF")]
+        [Display(Name = "UF")]
         [StringLength(25, MinimumLength = 2, ErrorMessage = "O nome deve ter entre 2 e 25 caracteres")]
         [Required(ErrorMessage = "Campo Obrigatório")]
         public string EstadoUf { get; set; }
