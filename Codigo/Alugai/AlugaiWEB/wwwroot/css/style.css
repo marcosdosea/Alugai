@@ -43,3 +43,84 @@
         margin-left: -15rem;
     }
 }
+
+
+/* Início Estilização da home */
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card-item {
+    background-color: rgb(255, 255, 255);
+    width: calc(25% - 20px);
+    margin: 10px;
+    text-align: center;
+    margin-bottom: 70px;
+    border-radius: 5px;
+    box-shadow: 2px 3px 3px 1px rgba(0, 0, 0, 0.3);
+}
+
+    .card-item .img {
+        margin-top: -50px;
+        width: 220px;
+        height: 220px;
+        border-radius: 50%;
+    }
+
+    .card-item h4 {
+        text-transform: capitalize;
+    }
+
+
+.card-content {
+    margin-top: 10px;
+}
+
+.card-item .card-content h4 {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.card-item .card-content i {
+    margin: 0 10px;
+}
+
+.card-content .price {
+    display: flex;
+    font-weight: 700;
+    font-size: 1.5em;
+    color: darkblue;
+    margin: 10px;
+    justify-content: flex-end;
+}
+
+.card-content .address p {
+    margin: 5px 0;
+}
+
+.tipo p {
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (max-width: 1244px) {
+    .card-item {
+        width: calc(33% - 20px);
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .card-item {
+        width: calc(50% - 20px);
+    }
+}
+
+@media screen and (max-width: 597px) {
+    .card-item {
+        width: calc(100% - 20px);
+    }
+}
+
+/* Início Estilização da home */

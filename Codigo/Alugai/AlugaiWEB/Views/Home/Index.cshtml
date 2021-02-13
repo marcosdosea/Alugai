@@ -1,8 +1,33 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Sistema Gerenciador de vendas e alugueis de imóveis";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="card-container" style="margin-top: 100px">
+    @for(int i = 0; i < 16; i++) {
+    <div class="card-item">
+        <img src="~/imagens/casa01.jpg" class="img" alt="...">
+        <div class="card-content">
+            <h4>Casa para alugar</h4>
+
+            <div class="icons">
+                <i class="fas fa-car"></i>
+                2
+                <i class="fas fa-bath"></i>
+                2
+                <i class="far fa-clone"></i>
+                70m²
+            </div>
+
+            <div class="address">
+                <p>
+                    <i class="fas fa-map-marker-alt"></i>
+                    Itabaiana - Rotary Club
+                </p>
+                <p>Avenida João Teixeira Nº 1149</p>
+            </div>
+
+            <p class="price">R$450,00</p>
+        </div>
+    </div>
+    }
 </div>
