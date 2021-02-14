@@ -1,8 +1,8 @@
 ﻿@{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Meus Dados";
 }
 
-<div class="d-flex" id="wrapper">
+<div class="d-flex" id="wrapper" style="padding:0;">
 
     <!-- Sidebar -->
     <div class="bg-light border-right" id="sidebar-wrapper">
@@ -16,6 +16,14 @@
             <a class="list-group-item list-group-item-action bg-light" asp-controller="Aluguel" asp-action="Index">Meus Alugueis</a>
 
         </div>
+    </div>
+
+    <div id="page-content-wrapper">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+            <button class="btn btn-primary" id="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
     </div>
 
 </div>
