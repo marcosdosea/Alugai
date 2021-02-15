@@ -19,6 +19,11 @@ namespace AlugaiWEB.Controllers
             return View();
         }
 
+        public IActionResult IndexMeusDados()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();

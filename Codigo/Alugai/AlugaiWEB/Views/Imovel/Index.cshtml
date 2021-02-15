@@ -1,58 +1,59 @@
 ﻿@model IEnumerable<AlugaiWEB.Models.ImovelModel>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Imóvel";
+    Layout = "_MeusDados";
 }
 
-<p class="mt-5">
+<p>
     <a class="btn btn-success" asp-action="Create">Cadastrar</a>
 </p>
 
 <body>
-   
-        <table class="table table-striped">
-            <thead>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.CodigoImovel)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TipoImovel)
+                </th>
+
+                <th>
+                    @Html.DisplayNameFor(model => model.Descricao)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ValorDoAluguel)
+                </th>
+
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
                 <tr>
-                    <th>
-                        @Html.DisplayNameFor(model => model.CodigoImovel)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.TipoImovel)
-                    </th>
-                                
-                    <th>
-                        @Html.DisplayNameFor(model => model.Descricao)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.ValorDoAluguel)
-                    </th>
-    
-                    <th>Ações</th>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CodigoImovel)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TipoImovel)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Descricao)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ValorDoAluguel)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Editar", "Edit", new { id = item.CodigoImovel }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.CodigoImovel }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.CodigoImovel })
+                    </td>
                 </tr>
-            </thead>
-            <tbody>
-                @foreach (var item in Model)
-                {
-                    <tr>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.CodigoImovel)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.TipoImovel)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Descricao)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.ValorDoAluguel)
-                        </td>
-                        <td>
-                            @Html.ActionLink("Editar", "Edit", new { id = item.CodigoImovel }) |
-                            @Html.ActionLink("Details", "Details", new { id = item.CodigoImovel }) |
-                            @Html.ActionLink("Delete", "Delete", new { id = item.CodigoImovel })
-                        </td>
-                    </tr>
-                }
-            </tbody>
-        </table>
+            }
+        </tbody>
+    </table>
 </body>
