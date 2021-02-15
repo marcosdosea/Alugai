@@ -62,16 +62,16 @@
     box-shadow: 2px 3px 3px 1px rgba(0, 0, 0, 0.3);
 }
 
-    .card-item .img {
-        margin-top: -50px;
-        width: 220px;
-        height: 220px;
-        border-radius: 50%;
-    }
+.card-item .img {
+    margin-top: -50px;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+}
 
-    .card-item h4 {
-        text-transform: capitalize;
-    }
+.card-item h4 {
+    text-transform: capitalize;
+}
 
 
 .card-content {
@@ -124,3 +124,18 @@
 }
 
 /* Início Estilização da home */
+
+
+
+
+/* Início Estilização Meus Dados */
+
+.user-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+
+
+/* Fim Estilização Meus Dados */

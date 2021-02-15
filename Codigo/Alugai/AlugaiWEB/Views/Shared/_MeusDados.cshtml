@@ -25,29 +25,43 @@
 
             <div class="collapse navbar-collapse navegacao" id="nav-navegacao">
                 <!--Inicio Barra de navegação-->
-                <partial name="_LoginPartial" />
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
                         <a href="" class="nav-link">Anunciar</a>
                     </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Imovel" asp-action="Index">Imovel</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" asp-controller="Home" asp-action="IndexMeusDados">
-                            <i class="far fa-user mr-1"></i>Entrar ou Cadastrar
-                        </a>
-                    </li>
                 </ul>
             </div> <!--Fim Barra de navegação-->
         </nav>
     </header>
-    <div class="">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
+
+    <div class="d-flex" id="wrapper" style="padding:0;">
+
+        <!-- Sidebar -->
+        <div class="bg-light border-right" id="sidebar-wrapper">
+            <div class="sidebar-heading">Alugaí</div>
+            <div class="list-group list-group-flush">
+
+                <a class="list-group-item list-group-item-action bg-light" asp-controller="Pessoa" asp-action="Index">Minha Conta</a>
+                <a class="list-group-item list-group-item-action bg-light" asp-controller="Imovel" asp-action="Index">Resumo</a>
+                <a class="list-group-item list-group-item-action bg-light" asp-controller="Pessoa" asp-action="Index">Meus Dados</a>
+                <a class="list-group-item list-group-item-action bg-light" asp-controller="Imovel" asp-action="Index">Meus Imoveis</a>
+                <a class="list-group-item list-group-item-action bg-light" asp-controller="Aluguel" asp-action="Index">Meus Alugueis</a>
+
+            </div>
+        </div>
+
+        <div id="page-content-wrapper">
+            <button class="btn btn-primary mt-2 ml-2" id="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <div class="p-3">
+                @RenderBody()
+
+            </div>
+        </div>
+
     </div>
 
     <footer class="border-top footer text-muted">
@@ -58,6 +72,13 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+
 </body>
 </html>
+
+<script>
+    $("#menu-toggle").click(function (e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+</script>
