@@ -2,77 +2,51 @@
 
 @{
     ViewData["Title"] = "Index";
+    Layout = "_MeusDados";
 }
 
-<h1>Index</h1>
-
 <p>
-    <a asp-action="Create">Create New</a>
+    <a class="btn btn-success" asp-action="Create">Cadastrar</a>
 </p>
 
-<body>
-    <div class="container-fluid">
-        <div class="container">
-            <div class="row py-3">
-                <div class="col-lg-3 col-sm-3 mr-auto" id="sticky-sidebar">
-                    <div class="sticky-top">
-                        <div class="bg-light border-right" id="sidebar-wrapper">
-                            <div class="list-group list-group-flush">
-                                <a class="list-group-item list-group-item-action bg-light" asp-controller="Pessoa" asp-action="Index">Minha Conta</a>
-                                <a class="list-group-item list-group-item-action bg-light" asp-controller="Pagamento" asp-action="Index">Resumo</a>
-                                <a class="list-group-item list-group-item-action bg-light" asp-controller="Pessoa" asp-action="Index">Meus Dados</a>
-                                <a class="list-group-item list-group-item-action bg-light" asp-controller="Imovel" asp-action="Index">Meus Imoveis</a>
-                                <a class="list-group-item list-group-item-action bg-light" asp-controller="Aluguel" asp-action="Index">Meus Alugueis</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-9 col-sm-8 ml-auto" id="main">
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CodigoAluguel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descricao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CodigoStatusPagamento)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CodigoAluguel)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Descricao)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CodigoStatusPagamento)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.CodigoAluguel }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.CodigoAluguel }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.CodigoAluguel })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
 
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>
-                                    @Html.DisplayNameFor(model => model.CodigoAluguel)
-                                </th>
-                                <th>
-                                    @Html.DisplayNameFor(model => model.Descricao)
-                                </th>
-                                <th>
-                                    @Html.DisplayNameFor(model => model.CodigoStatusPagamento)
-                                </th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach (var item in Model)
-                            {
-                                <tr>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.CodigoAluguel)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.Descricao)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.CodigoStatusPagamento)
-                                    </td>
-                                    <td>
-                                        @Html.ActionLink("Edit", "Edit", new { id = item.CodigoAluguel }) |
-                                        @Html.ActionLink("Details", "Details", new { id = item.CodigoAluguel }) |
-                                        @Html.ActionLink("Delete", "Delete", new { id = item.CodigoAluguel })
-                                    </td>
-                                </tr>
-                            }
-                        </tbody>
-                    </table>
-
-
-                </div>
-            </div>
-        </div>
-    </div>
-</body>
 
 
 
