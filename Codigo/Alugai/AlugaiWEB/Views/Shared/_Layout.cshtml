@@ -15,7 +15,7 @@
         <nav class="navbar navbar-expand-sm navbar-light bg-light">
             <!--Logo-->
             <a href="/" class="navbar-brand">
-                <img src="~/imagens/logo.png" class="img-fluid" width="150px">
+                <img src="~/imagens/logo.png" class="img-fluid" width="150">
             </a>
 
             <!--Menu Hamburguer-->
@@ -40,7 +40,11 @@
             </div> <!--Fim Barra de navegação-->
         </nav>
     </header>
-    <div class="">
+
+    @Html.Partial("_filtersHeader")
+
+
+    <div class="container-home">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
