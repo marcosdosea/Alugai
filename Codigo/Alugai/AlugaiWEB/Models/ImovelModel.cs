@@ -40,7 +40,8 @@ namespace AlugaiWEB.Models
         public string Descricao { get; set; }
 
         [Display(Name = "Preço")]
-        [Required(ErrorMessage = "Campo Obrigatório")]
+        [DisplayFormat(DataFormatString = "{0:F2}")]
+        [Required(ErrorMessage = "{0} é obrigatório")]
         public double ValorDoAluguel { get; set; }
 
         [Display(Name = "Valor do Condominio")]

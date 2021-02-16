@@ -19,9 +19,10 @@ namespace AlugaiWEB.Models
         [Required(ErrorMessage = "Campo Obrigatório")]
         public string TipoDeDespesa { get; set; }
 
-        [Display(Name = "Valor")]
-        [Required(ErrorMessage = "Valor é Obrigatório")]
-        public int Valor { get; set; }
+        [Display(Name = "Base Salarial")]
+        [DisplayFormat(DataFormatString = "{0:F2}")]
+        [Required(ErrorMessage = "{0} é obrigatório")]
+        public double Valor { get; set; }
 
         [Display(Name = "Descrição Imóvel")]
         [Required(ErrorMessage = "Descrição do imóvel é Obrigatório")]

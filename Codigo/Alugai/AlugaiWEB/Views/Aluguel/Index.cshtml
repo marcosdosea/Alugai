@@ -38,9 +38,9 @@
                     @Html.DisplayFor(modelItem => item.CodigoStatusPagamento)
                 </td>
                 <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.CodigoAluguel }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.CodigoAluguel }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.CodigoAluguel })
+                    @Html.ActionLink("", "Edit", new { id = item.CodigoAluguel}, new { @class = "far fa-edit text-warning" })
+                    @Html.ActionLink("", "Details", new { id = item.CodigoAluguel}, new { @class = "fas fa-info-circle text-primary" })
+                    @Html.ActionLink("", "Delete", new { id = item.CodigoAluguel}, new { @class = "fas fa-trash text-danger" })
                 </td>
             </tr>
         }

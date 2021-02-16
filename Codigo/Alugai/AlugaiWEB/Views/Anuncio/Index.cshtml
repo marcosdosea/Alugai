@@ -39,9 +39,9 @@
             </td>
 
             <td>
-                @Html.ActionLink("Edit", "Edit", new {  id=item.CodigoAnuncio}) |
-                @Html.ActionLink("Details", "Details", new {  id=item.CodigoAnuncio}) |
-                @Html.ActionLink("Delete", "Delete", new { id=item.CodigoAnuncio })
+                @Html.ActionLink("", "Edit", new { id = item.CodigoAnuncio }, new { @class = "far fa-edit text-warning" })
+                @Html.ActionLink("", "Details", new { id = item.CodigoAnuncio }, new { @class = "fas fa-info-circle text-primary" })
+                @Html.ActionLink("", "Delete", new { id = item.CodigoAnuncio }, new { @class = "fas fa-trash text-danger" })
             </td>
         </tr>
 }
