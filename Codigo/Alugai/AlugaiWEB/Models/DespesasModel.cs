@@ -19,10 +19,6 @@ namespace AlugaiWEB.Models
         [Required(ErrorMessage = "Campo Obrigatório")]
         public string TipoDeDespesa { get; set; }
 
-        //[Display(Name = "Valor")]
-        //DisplayFormat(DataFormatString = "{0:F2}")]
-        //[Required(ErrorMessage = "Valor é Obrigatório")]
-
         [Display(Name = "Base Salarial")]
         [DisplayFormat(DataFormatString = "{0:F2}")]
         [Required(ErrorMessage = "{0} é obrigatório")]
