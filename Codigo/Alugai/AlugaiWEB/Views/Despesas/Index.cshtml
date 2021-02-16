@@ -43,9 +43,9 @@
                 @Html.DisplayFor(modelItem => item.Valor)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new {  id=item.CodigoDespesas }) |
-                @Html.ActionLink("Details", "Details", new { id=item.CodigoDespesas }) |
-                @Html.ActionLink("Delete", "Delete", new { id=item.CodigoDespesas })
+                @Html.ActionLink("", "Edit", new { id = item.CodigoDespesas }, new { @class = "far fa-edit text-warning" })
+                @Html.ActionLink("", "Details", new { id = item.CodigoDespesas }, new { @class = "fas fa-info-circle text-primary" })
+                @Html.ActionLink("", "Delete", new { id = item.CodigoDespesas }, new { @class = "fas fa-trash text-danger" })
             </td>
         </tr>
 }

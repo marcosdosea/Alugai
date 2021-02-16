@@ -67,9 +67,9 @@
                 @Html.DisplayFor(modelItem => item.StatusManutencao)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new {  id=item.CodigoManuntencao }) |
-                @Html.ActionLink("Details", "Details", new { id = item.CodigoManuntencao }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.CodigoManuntencao })
+                @Html.ActionLink("", "Edit", new { id = item.CodigoManuntencao }, new { @class = "far fa-edit text-warning" })
+                @Html.ActionLink("", "Details", new { id = item.CodigoManuntencao }, new { @class = "fas fa-info-circle text-primary" })
+                @Html.ActionLink("", "Delete", new { id = item.CodigoManuntencao }, new { @class = "fas fa-trash text-danger" })
             </td>
         </tr>
 }

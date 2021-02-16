@@ -19,8 +19,9 @@ namespace AlugaiWEB.Models
         [Required(ErrorMessage = "Campo Obrigatório")]
         public string Descricao { get; set; }
 
-        [Display(Name = "Valor Da Manutenção")]
-        [Required(ErrorMessage = "O valor da manuntenção é Obrigatório")]
+        [Display(Name = "Valor da Manutenção")]
+        [DisplayFormat(DataFormatString = "{0:F2}")]
+        [Required(ErrorMessage = "{0} é obrigatório")]
         public double Valor { get; set; }
 
         [Display(Name = "Comodo Do Imóvel")]

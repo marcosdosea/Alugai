@@ -32,9 +32,9 @@
                     @Html.DisplayFor(modelItem => item.Descricao)
                 </td>
                 <td>
-                    @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                    @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                    @Html.ActionLink("", "Edit", new { id = item.CodigoStatusPagamento }, new { @class = "far fa-edit text-warning" })
+                    @Html.ActionLink("", "Details", new { id = item.CodigoStatusPagamento }, new { @class = "fas fa-info-circle text-primary" })
+                    @Html.ActionLink("", "Delete", new { id = item.CodigoStatusPagamento }, new { @class = "fas fa-trash text-danger" })
                 </td>
             </tr>
         }

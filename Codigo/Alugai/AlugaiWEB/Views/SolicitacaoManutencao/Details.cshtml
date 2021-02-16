@@ -59,6 +59,6 @@
     </dl>
 </div>
 <div>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.CodigoManuntencao }) |
-    <a asp-action="Index">Back to List</a>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.CodigoManuntencao }, new { @class = "btn btn-warning" })
+    <a class="btn btn-light" asp-action="Index">Voltar</a>
 </div>

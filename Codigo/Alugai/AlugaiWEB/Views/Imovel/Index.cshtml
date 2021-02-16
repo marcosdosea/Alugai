@@ -48,9 +48,9 @@
                         @Html.DisplayFor(modelItem => item.ValorDoAluguel)
                     </td>
                     <td>
-                        @Html.ActionLink("Editar", "Edit", new { id = item.CodigoImovel }) |
-                        @Html.ActionLink("Details", "Details", new { id = item.CodigoImovel }) |
-                        @Html.ActionLink("Delete", "Delete", new { id = item.CodigoImovel })
+                        @Html.ActionLink("", "Edit", new { id = item.CodigoImovel }, new { @class = "far fa-edit text-warning" })
+                        @Html.ActionLink("", "Details", new { id = item.CodigoImovel }, new { @class = "fas fa-info-circle text-primary" })
+                        @Html.ActionLink("", "Delete", new { id = item.CodigoImovel }, new { @class = "fas fa-trash text-danger" })
                     </td>
                 </tr>
             }

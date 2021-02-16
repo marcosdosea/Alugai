@@ -15,7 +15,8 @@ namespace AlugaiWEB.Models
         public DateTime DataPagamento { get; set; }
 
         [Display(Name = "Valor do Aluguel")]
-        [Required(ErrorMessage = "Campo Obrigatório")]
+        [DisplayFormat(DataFormatString = "{0:F2}")]
+        [Required(ErrorMessage = "{0} é obrigatório")]
         public double Valor { get; set; }
 
         [Display(Name = "DT. Vencimento")]
