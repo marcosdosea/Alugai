@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="~/css/site.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <link rel="stylesheet" href="~/css/style.css" />
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/footer-with-button-logo.css">
+
 
 </head>
 <body>
@@ -50,14 +54,58 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <!--Inicio do Rodapé-->
+    <div class="content">
+    </div>
+    <footer id="myFooter">
         <div class="container">
-            &copy; 2021 - AlugaiWEB - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            <div class="row">
+                <div class="col-sm-3">
+                    <a href="/" class="navbar-brand">
+                        <img src="~/imagens/logo_write.png" class="img-fluid" width="150">
+                    </a>
+                </div>
+                <div class="col-sm-2">
+                    <h5>Inicio</h5>
+                    <ul>
+                        <li>Home</li>
+                        <li>Trabalhe Conosco</li>
+                        <li>Politica de Privacidade</li>
+                    </ul>
+                </div>
+                <div class="col-sm-2">
+                    <h5>Sobre-nós</h5>
+                    <ul>
+                        <li>Informações da Empresa</li>
+                        <li>Contato</li>
+                        <li>Blog</li>
+                    </ul>
+                </div>
+                <div class="col-sm-2">
+                    <h5>Suporte</h5>
+                    <ul>
+                        <li>FAQ</li>
+                        <li>Telefones</li>
+                        <li>Chat</li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <button type="button" class="bt btn-default">Anunciar</button>
+                    <button type="button" class="btn btn-default">Contato</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>© 2021 Copyright - Alugai</p>
         </div>
     </footer>
+    <!--Fim do Rodapé-->
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
