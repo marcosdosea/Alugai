@@ -14,7 +14,7 @@ namespace AlugaiWEB.Models
         [Required(ErrorMessage ="Campo Obrigatório")]
         public string Nome { get; set; }
 
-        [Display(Name = "Email")]
+        [Display(Name = "E-mail")]
         [StringLength(50, MinimumLength = 10, ErrorMessage = "O nome deve ter entre 10 e 50 caracteres")]
         [Required(ErrorMessage = "Campo Obrigatório")]
         public string Email { get; set; }
@@ -35,8 +35,6 @@ namespace AlugaiWEB.Models
         public string Cpf { get; set; }
 
         [Display(Name = "Sexo")]
-        [StringLength(20, MinimumLength = 5, ErrorMessage = "O nome deve ter entre 5 e 20 caracteres")]
-        [Required(ErrorMessage = "Campo Obrigatório")]
         public string Sexo { get; set; }
 
         [Display(Name = "Data Nascimento")]
@@ -74,7 +72,7 @@ namespace AlugaiWEB.Models
         [Required(ErrorMessage = "Campo Obrigatório")]
         public string EstadoUf { get; set; }
 
-        [Display(Name = "Numero Do Endereço")]
+        [Display(Name = "Número")]
         [Required(ErrorMessage = "Campo Obrigatório")]
         public int NumeroDoEndereco { get; set; }
 
