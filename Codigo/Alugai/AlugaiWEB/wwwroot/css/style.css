@@ -138,11 +138,15 @@
 
 /* Início Estilização Meus Dados */
 
+.logoff a{
+    cursor: pointer;
+}
 .user-img {
     width: 30px;
     height: 30px;
     border-radius: 50%;
 }
+
 
 /* Fim Estilização Meus Dados */
 
