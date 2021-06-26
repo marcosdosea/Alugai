@@ -197,16 +197,15 @@ namespace AlugaiWEB.Controllers.Tests
             return new AluguelModel { CodigoAluguel = 4, Descricao = "Aluguel do Adriano", CodigoStatusPagamento = 1 };
         }
 
-        private static Statuspagamento GetTargetStatusPagamento()
-        {
-            return new Statuspagamento { CodigoStatusPagamento = 1, Descricao = "EM ABERTO" };
-        }
-
         private static AluguelModel GetTargetAluguelModel()
         {
             return new AluguelModel { CodigoAluguel = 4, Descricao = "Aluguel do Adriano", CodigoStatusPagamento = 1 };
         }
 
+        private static Statuspagamento GetTargetStatusPagamento()
+        {
+            return new Statuspagamento { CodigoStatusPagamento = 1, Descricao = "EM ABERTO" };
+        }
 
         private static IEnumerable<Statuspagamento> GetTestStatusPagamento()
         {
