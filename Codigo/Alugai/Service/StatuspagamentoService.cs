@@ -24,8 +24,9 @@ namespace Service
 
         public void Excluir(int codigoStatusPagamento)
         {
-            var _statuspagamento = _context.Pagamento.Find(codigoStatusPagamento);
-            _context.Pagamento.Remove(_statuspagamento);
+
+            var _statuspagamento = _context.Statuspagamento.Find(codigoStatusPagamento);
+            _context.Statuspagamento.Remove(_statuspagamento);
             _context.SaveChanges();
         }
 
@@ -50,7 +51,9 @@ namespace Service
 
         Statuspagamento IStatuspagamentoService.Buscar(int CodigoStatusPagamento)
         {
-            throw new NotImplementedException();
+            IEnumerable<Statuspagamento> statuspagamentos = GetQuery().Where(statuspagamentoModel => statuspagamentoModel.CodigoStatusPagamento.Equals(CodigoStatusPagamento));
+
+            return statuspagamentos.ElementAtOrDefault(0);
         }
     }
 }
