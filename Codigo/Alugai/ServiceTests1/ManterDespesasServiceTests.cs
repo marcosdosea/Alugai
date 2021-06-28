@@ -19,14 +19,14 @@ namespace Service.Tests
 		[TestInitialize]
 		public void Initialize()
 		{
-			//Arrange
-			//var builder = new DbContextOptionsBuilder<alugaiContext>();
-			//builder.UseInMemoryDatabase("alugai");
-			//var options = builder.Options;
+			
+			var builder = new DbContextOptionsBuilder<alugaiContext>();
+			builder.UseInMemoryDatabase("alugai");
+			var options = builder.Options;
 
-			//_context = new alugaiContext(options);
-			//_context.Database.EnsureDeleted();
-			//_context.Database.EnsureCreated();
+			_context = new alugaiContext(options);
+			_context.Database.EnsureDeleted();
+			_context.Database.EnsureCreated();
 			var despesas = new List<Despesas>
 				{
 					new Despesas { CodigoDespesas = 1, TipoDeDespesa = "TESTE", Valor = 45, DescricaoDespesa = "Conserto de torneira", CodigoImovel = 1  },

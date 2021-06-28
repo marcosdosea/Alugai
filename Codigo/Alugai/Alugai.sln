@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service", "Service\Service.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlugaiWEBTests", "AlugaiWEBTests\AlugaiWEBTests.csproj", "{188F7F40-8F98-48BA-A74D-C64F397AEEF4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceTests1", "ServiceTests1\ServiceTests1.csproj", "{BDFC0558-7F6C-423C-A6CB-A2EE05EBCB61}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{188F7F40-8F98-48BA-A74D-C64F397AEEF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{188F7F40-8F98-48BA-A74D-C64F397AEEF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{188F7F40-8F98-48BA-A74D-C64F397AEEF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDFC0558-7F6C-423C-A6CB-A2EE05EBCB61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDFC0558-7F6C-423C-A6CB-A2EE05EBCB61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDFC0558-7F6C-423C-A6CB-A2EE05EBCB61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDFC0558-7F6C-423C-A6CB-A2EE05EBCB61}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
