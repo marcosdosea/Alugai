@@ -91,4 +91,5 @@ namespace AlugaiWEB.Controllers
             _imovelService.Excluir(id);
             return RedirectToAction(nameof(Index));
         }
+    }
 }
