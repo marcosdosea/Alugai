@@ -58,11 +58,10 @@ namespace AlugaiWEB.Controllers
         
         public ActionResult Edit(int id, Imovel imovel)
         {
-            Imovel imovel = _imovelService.Buscar(id);
+            imovel = _imovelService.Buscar(id);
             ImovelModel imovelModel = _mapper.Map<ImovelModel>(imovel);
             return View(imovelModel);
         }
-
         
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -79,8 +78,8 @@ namespace AlugaiWEB.Controllers
         
         public ActionResult Delete(int id, Imovel imovel)
         {
-            Imovel imovel = _imovelService.Buscar(id);
-            ImovelModel imovelModel = _mapper.Map<ImovelModel>(imovel);
+            Imovel imovell = _imovelService.Buscar(id);
+            ImovelModel imovelModel = _mapper.Map<ImovelModel>(imovell);
             return View(imovelModel);
         }
 
