@@ -56,7 +56,7 @@ namespace AlugaiWEB.Controllers
         }
 
         
-        public ActionResult Edit(int id, Imovel imovel)
+        public ActionResult Edit(int id)
         {
             Imovel imovel = _imovelService.Buscar(id);
             ImovelModel imovelModel = _mapper.Map<ImovelModel>(imovel);
@@ -77,7 +77,7 @@ namespace AlugaiWEB.Controllers
         }
 
         
-        public ActionResult Delete(int id, Imovel imovel)
+        public ActionResult Delete(int id)
         {
             Imovel imovel = _imovelService.Buscar(id);
             ImovelModel imovelModel = _mapper.Map<ImovelModel>(imovel);
@@ -91,16 +91,6 @@ namespace AlugaiWEB.Controllers
         {
             _imovelService.Excluir(id);
             return RedirectToAction(nameof(Index));
-        }
-
-        public object Delete(int v)
-        {
-            throw new NotImplementedException();
-        }
-
-        public object Edit(int v)
-        {
-            throw new NotImplementedException();
         }
     }
 }
