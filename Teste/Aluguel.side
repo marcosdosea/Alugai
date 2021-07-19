@@ -1,0 +1,427 @@
+{
+  "id": "449660a3-4425-43e4-8ea9-ff909781ea76",
+  "version": "2.0",
+  "name": "Aluguel",
+  "url": "https://localhost:44368",
+  "tests": [{
+    "id": "a3235939-5e51-4eaf-a210-444d72032f60",
+    "name": "InserirAluguelValido",
+    "commands": [{
+      "id": "79e727a2-9785-4827-843d-f21094829f5b",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4a8104e7-7a24-43bc-9284-0ed48861a5db",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x768",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "10a60b86-81a4-4fd4-90ec-82b0c2e5a2dc",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Entrar ou Cadastrar",
+      "targets": [
+        ["linkText=Entrar ou Cadastrar", "linkText"],
+        ["css=.ml-auto > .nav-item:nth-child(2) > .nav-link", "css:finder"],
+        ["xpath=//div[@id='nav-navegacao']/ul[2]/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Home/IndexMeusDados')]", "xpath:href"],
+        ["xpath=//ul[2]/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Entrar ou Cadastrar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f3101da4-4ce3-42c5-9f94-04bfeb3fb1e8",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Meus Alugueis",
+      "targets": [
+        ["linkText=Meus Alugueis", "linkText"],
+        ["css=.list-group-item:nth-child(5)", "css:finder"],
+        ["xpath=//a[contains(text(),'Meus Alugueis')]", "xpath:link"],
+        ["xpath=//div[@id='sidebar-wrapper']/div[2]/a[5]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Aluguel')]", "xpath:href"],
+        ["xpath=//a[5]", "xpath:position"],
+        ["xpath=//a[contains(.,'Meus Alugueis')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "862f3432-42bc-465c-b857-f1c3d05cced7",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Cadastrar",
+      "targets": [
+        ["linkText=Cadastrar", "linkText"],
+        ["css=.btn-success", "css:finder"],
+        ["xpath=//a[contains(text(),'Cadastrar')]", "xpath:link"],
+        ["xpath=//div[@id='page-content-wrapper']/div/p/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Aluguel/Create')]", "xpath:href"],
+        ["xpath=//p/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Cadastrar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9d89716d-f658-410a-8c7c-d971e075bfb4",
+      "comment": "",
+      "command": "click",
+      "target": "id=CodigoAluguel",
+      "targets": [
+        ["id=CodigoAluguel", "id"],
+        ["name=CodigoAluguel", "name"],
+        ["css=#CodigoAluguel", "css:finder"],
+        ["xpath=//input[@id='CodigoAluguel']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0345ee18-a39a-4c49-8a7d-84563ba5c7fa",
+      "comment": "",
+      "command": "type",
+      "target": "id=CodigoAluguel",
+      "targets": [
+        ["id=CodigoAluguel", "id"],
+        ["name=CodigoAluguel", "name"],
+        ["css=#CodigoAluguel", "css:finder"],
+        ["xpath=//input[@id='CodigoAluguel']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "3"
+    }, {
+      "id": "15ee9803-ac2d-4056-b7ae-1d9cab51ec0f",
+      "comment": "",
+      "command": "type",
+      "target": "id=Descricao",
+      "targets": [
+        ["id=Descricao", "id"],
+        ["name=Descricao", "name"],
+        ["css=#Descricao", "css:finder"],
+        ["xpath=//input[@id='Descricao']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/div/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "aluguel da casa de praia"
+    }, {
+      "id": "f38f9f87-e8b6-4c30-92b1-fe2f817a72b1",
+      "comment": "",
+      "command": "select",
+      "target": "id=CodigoStatusPagamento",
+      "targets": [],
+      "value": "label=nao pago"
+    }, {
+      "id": "3246f427-652b-4e01-abb8-41bea46efd93",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-group > .btn",
+      "targets": [
+        ["css=.form-group > .btn", "css:finder"],
+        ["xpath=//input[@value='Create']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/div/form/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9e1733b9-c006-436a-88b8-d149b305f382",
+      "comment": "",
+      "command": "click",
+      "target": "css=.p-3",
+      "targets": [
+        ["css=.p-3", "css:finder"],
+        ["xpath=//div[@id='page-content-wrapper']/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "badff7b7-a6e1-4ee1-a79a-ff90a3bef9a5",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(2) > td:nth-child(1)",
+      "targets": [
+        ["css=tr:nth-child(2) > td:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='page-content-wrapper']/div/table/tbody/tr[2]/td", "xpath:idRelative"],
+        ["xpath=//tr[2]/td", "xpath:position"],
+        ["xpath=//td[contains(.,'3')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bfb56f71-95ee-407d-ac87-a6ffd3627ea7",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(2) > td:nth-child(1)",
+      "targets": [
+        ["css=tr:nth-child(2) > td:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='page-content-wrapper']/div/table/tbody/tr[2]/td", "xpath:idRelative"],
+        ["xpath=//tr[2]/td", "xpath:position"],
+        ["xpath=//td[contains(.,'3')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "51821086-88db-4430-94ac-c9ab544ec0af",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(2) > td:nth-child(1)",
+      "targets": [
+        ["css=tr:nth-child(2) > td:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='page-content-wrapper']/div/table/tbody/tr[2]/td", "xpath:idRelative"],
+        ["xpath=//tr[2]/td", "xpath:position"],
+        ["xpath=//td[contains(.,'3')]", "xpath:innerText"]
+      ],
+      "value": "3"
+    }, {
+      "id": "95a0b637-3a2e-4c9b-b364-f59180112bde",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(2) > td:nth-child(2)",
+      "targets": [
+        ["css=tr:nth-child(2) > td:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='page-content-wrapper']/div/table/tbody/tr[2]/td[2]", "xpath:idRelative"],
+        ["xpath=//tr[2]/td[2]", "xpath:position"],
+        ["xpath=//td[contains(.,'aluguel da casa de praia')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ebcd0f8e-e0f8-4fc6-ba74-87d5a0ac1ee5",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(2) > td:nth-child(2)",
+      "targets": [
+        ["css=tr:nth-child(2) > td:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='page-content-wrapper']/div/table/tbody/tr[2]/td[2]", "xpath:idRelative"],
+        ["xpath=//tr[2]/td[2]", "xpath:position"],
+        ["xpath=//td[contains(.,'aluguel da casa de praia')]", "xpath:innerText"]
+      ],
+      "value": "aluguel da casa de praia"
+    }, {
+      "id": "dc013ad1-27fd-4867-9568-739ba836c08a",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(2) > td:nth-child(3)",
+      "targets": [
+        ["css=tr:nth-child(2) > td:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='page-content-wrapper']/div/table/tbody/tr[2]/td[3]", "xpath:idRelative"],
+        ["xpath=//tr[2]/td[3]", "xpath:position"],
+        ["xpath=//td[contains(.,'2')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c74011d9-9bfc-4565-a097-3b77273c2ef8",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=tr:nth-child(2) > td:nth-child(3)",
+      "targets": [
+        ["css=tr:nth-child(2) > td:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='page-content-wrapper']/div/table/tbody/tr[2]/td[3]", "xpath:idRelative"],
+        ["xpath=//tr[2]/td[3]", "xpath:position"],
+        ["xpath=//td[contains(.,'2')]", "xpath:innerText"]
+      ],
+      "value": "2"
+    }, {
+      "id": "bfc3d807-1062-4788-bc6c-1d91826300ad",
+      "comment": "",
+      "command": "click",
+      "target": "id=page-content-wrapper",
+      "targets": [
+        ["id=page-content-wrapper", "id"],
+        ["css=#page-content-wrapper", "css:finder"],
+        ["xpath=//div[@id='page-content-wrapper']", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div[2]", "xpath:idRelative"],
+        ["xpath=//body/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "6e24a047-437e-4ee6-96d4-018bad16b526",
+    "name": "AlterarAluguelValido",
+    "commands": [{
+      "id": "23a32bc2-2b6e-4303-9f32-338c08742255",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "76d3da38-4f63-4b30-bbf8-7bb76bfe7705",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x768",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9ace647f-c1a9-4c23-9e80-d28b99ccfa31",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Entrar ou Cadastrar",
+      "targets": [
+        ["linkText=Entrar ou Cadastrar", "linkText"],
+        ["css=.ml-auto > .nav-item:nth-child(2) > .nav-link", "css:finder"],
+        ["xpath=//div[@id='nav-navegacao']/ul[2]/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Home/IndexMeusDados')]", "xpath:href"],
+        ["xpath=//ul[2]/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Entrar ou Cadastrar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ff7c27b7-314b-4d09-8625-a22fba92925b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Meus Alugueis",
+      "targets": [
+        ["linkText=Meus Alugueis", "linkText"],
+        ["css=.list-group-item:nth-child(5)", "css:finder"],
+        ["xpath=//a[contains(text(),'Meus Alugueis')]", "xpath:link"],
+        ["xpath=//div[@id='sidebar-wrapper']/div[2]/a[5]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Aluguel')]", "xpath:href"],
+        ["xpath=//a[5]", "xpath:position"],
+        ["xpath=//a[contains(.,'Meus Alugueis')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bc4614bc-fa44-4779-9e9d-d85551d31417",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(2) .far",
+      "targets": [
+        ["css=tr:nth-child(2) .far", "css:finder"],
+        ["xpath=//div[@id='page-content-wrapper']/div/table/tbody/tr[2]/td[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Aluguel/Edit/3')]", "xpath:href"],
+        ["xpath=//tr[2]/td[4]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a1cae20c-229d-4844-8c70-1ccd1a86d121",
+      "comment": "",
+      "command": "click",
+      "target": "id=CodigoStatusPagamento",
+      "targets": [
+        ["id=CodigoStatusPagamento", "id"],
+        ["name=CodigoStatusPagamento", "name"],
+        ["css=#CodigoStatusPagamento", "css:finder"],
+        ["xpath=//select[@id='CodigoStatusPagamento']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/div/form/div[3]/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"],
+        ["xpath=//select[contains(.,'pago\nnao pago')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a4e0f694-fff9-4da0-8e5c-5cfdaa796006",
+      "comment": "",
+      "command": "select",
+      "target": "id=CodigoStatusPagamento",
+      "targets": [],
+      "value": "label=pago"
+    }, {
+      "id": "25841d5a-a479-4618-8222-2344125fc731",
+      "comment": "",
+      "command": "click",
+      "target": "id=CodigoStatusPagamento",
+      "targets": [
+        ["id=CodigoStatusPagamento", "id"],
+        ["name=CodigoStatusPagamento", "name"],
+        ["css=#CodigoStatusPagamento", "css:finder"],
+        ["xpath=//select[@id='CodigoStatusPagamento']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/div/form/div[3]/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"],
+        ["xpath=//select[contains(.,'pago\nnao pago')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2bbf37b0-2c51-4dc7-9bb1-53bf093ce047",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-group > .btn",
+      "targets": [
+        ["css=.form-group > .btn", "css:finder"],
+        ["xpath=//input[@value='Save']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/div/form/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "efb6f193-32a1-4206-a75d-5e90f521decf",
+    "name": "DeletarAluguelValido",
+    "commands": [{
+      "id": "0e663b5f-a7d2-4032-ac6a-33930b99b204",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "84270f33-52fd-409d-ba00-59c4a6c37352",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x768",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "98fd33d9-8679-4aff-b4e6-ad655de00081",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Entrar ou Cadastrar",
+      "targets": [
+        ["linkText=Entrar ou Cadastrar", "linkText"],
+        ["css=.ml-auto > .nav-item:nth-child(2) > .nav-link", "css:finder"],
+        ["xpath=//div[@id='nav-navegacao']/ul[2]/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Home/IndexMeusDados')]", "xpath:href"],
+        ["xpath=//ul[2]/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Entrar ou Cadastrar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a300bee7-872b-4150-91e2-48ddd918fdee",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Meus Alugueis",
+      "targets": [
+        ["linkText=Meus Alugueis", "linkText"],
+        ["css=.list-group-item:nth-child(5)", "css:finder"],
+        ["xpath=//a[contains(text(),'Meus Alugueis')]", "xpath:link"],
+        ["xpath=//div[@id='sidebar-wrapper']/div[2]/a[5]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Aluguel')]", "xpath:href"],
+        ["xpath=//a[5]", "xpath:position"],
+        ["xpath=//a[contains(.,'Meus Alugueis')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "75e60d42-876f-43cb-8174-bb79648714b5",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(2) .fa-trash",
+      "targets": [
+        ["css=tr:nth-child(2) .fa-trash", "css:finder"],
+        ["xpath=//div[@id='page-content-wrapper']/div/table/tbody/tr[2]/td[4]/a[3]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Aluguel/Delete/3')]", "xpath:href"],
+        ["xpath=//tr[2]/td[4]/a[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9e8fbe43-d185-4f28-9e6b-1ad34e97601f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-danger",
+      "targets": [
+        ["css=.btn-danger", "css:finder"],
+        ["xpath=//input[@value='Delete']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/form/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "e77012bb-3739-44f8-9fe3-73bf646d8e01",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://localhost:44368/"],
+  "plugins": []
+}
