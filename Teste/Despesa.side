@@ -1,0 +1,312 @@
+{
+  "id": "56d7a543-e3c6-4558-89c1-acf019ea4354",
+  "version": "2.0",
+  "name": "Despesa",
+  "url": "https://localhost:44368/Despesas",
+  "tests": [{
+    "id": "5566e4c4-7c5e-4db1-a475-6d5a73ca08d1",
+    "name": "InserirDespesaValida",
+    "commands": [{
+      "id": "0ac7224c-d834-42f8-a052-6bd2c199bb8f",
+      "comment": "",
+      "command": "open",
+      "target": "/Despesas",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bdf2ce03-9177-4ef3-85c3-4bcbf41915e5",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x768",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d37917f5-b86c-48c5-a960-e8bb3b14fde1",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Cadastrar",
+      "targets": [
+        ["linkText=Cadastrar", "linkText"],
+        ["css=.btn-success", "css:finder"],
+        ["xpath=//a[contains(text(),'Cadastrar')]", "xpath:link"],
+        ["xpath=//div[@id='page-content-wrapper']/div/p/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Despesas/Create')]", "xpath:href"],
+        ["xpath=//p/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Cadastrar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "590f2170-aba1-4118-b8ce-da2ff5f84082",
+      "comment": "",
+      "command": "click",
+      "target": "id=CodigoDespesas",
+      "targets": [
+        ["id=CodigoDespesas", "id"],
+        ["name=CodigoDespesas", "name"],
+        ["css=#CodigoDespesas", "css:finder"],
+        ["xpath=//input[@id='CodigoDespesas']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7ee44be1-0a49-43f7-8fff-af84a5ae3bd6",
+      "comment": "",
+      "command": "type",
+      "target": "id=CodigoDespesas",
+      "targets": [
+        ["id=CodigoDespesas", "id"],
+        ["name=CodigoDespesas", "name"],
+        ["css=#CodigoDespesas", "css:finder"],
+        ["xpath=//input[@id='CodigoDespesas']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "3"
+    }, {
+      "id": "c5842ac8-9824-471d-bf54-3bc6a1f16b29",
+      "comment": "",
+      "command": "type",
+      "target": "id=DescricaoDespesa",
+      "targets": [
+        ["id=DescricaoDespesa", "id"],
+        ["name=DescricaoDespesa", "name"],
+        ["css=#DescricaoDespesa", "css:finder"],
+        ["xpath=//input[@id='DescricaoDespesa']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/div/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "troca de chuveiro"
+    }, {
+      "id": "a291d9fd-d05a-4553-b543-dfcc3af86fed",
+      "comment": "",
+      "command": "type",
+      "target": "id=TipoDeDespesa",
+      "targets": [
+        ["id=TipoDeDespesa", "id"],
+        ["name=TipoDeDespesa", "name"],
+        ["css=#TipoDeDespesa", "css:finder"],
+        ["xpath=//input[@id='TipoDeDespesa']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/div/form/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "nada"
+    }, {
+      "id": "d57393e7-817a-4c7b-9658-df0f86975706",
+      "comment": "",
+      "command": "click",
+      "target": "id=wrapper",
+      "targets": [
+        ["id=wrapper", "id"],
+        ["css=#wrapper", "css:finder"],
+        ["xpath=//div[@id='wrapper']", "xpath:attributes"],
+        ["xpath=//body/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "849e3e55-f9b9-4121-9849-38dffa795fc6",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=TipoDeDespesa",
+      "targets": [
+        ["id=TipoDeDespesa", "id"],
+        ["name=TipoDeDespesa", "name"],
+        ["css=#TipoDeDespesa", "css:finder"],
+        ["xpath=//input[@id='TipoDeDespesa']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/div/form/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "${KEY_DOWN}"
+    }, {
+      "id": "023a6620-09a5-4d77-84f1-61b85adfe283",
+      "comment": "",
+      "command": "type",
+      "target": "id=TipoDeDespesa",
+      "targets": [
+        ["id=TipoDeDespesa", "id"],
+        ["name=TipoDeDespesa", "name"],
+        ["css=#TipoDeDespesa", "css:finder"],
+        ["xpath=//input[@id='TipoDeDespesa']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/div/form/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "manuntenção hidraulica"
+    }, {
+      "id": "68807547-b42d-4be5-8c2e-2dd976710931",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=TipoDeDespesa",
+      "targets": [
+        ["id=TipoDeDespesa", "id"],
+        ["name=TipoDeDespesa", "name"],
+        ["css=#TipoDeDespesa", "css:finder"],
+        ["xpath=//input[@id='TipoDeDespesa']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/div/form/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "${KEY_TAB}"
+    }, {
+      "id": "8e74eea7-b678-4d56-9082-a9bf027c6a28",
+      "comment": "",
+      "command": "type",
+      "target": "id=Valor",
+      "targets": [
+        ["id=Valor", "id"],
+        ["name=Valor", "name"],
+        ["css=#Valor", "css:finder"],
+        ["xpath=//input[@id='Valor']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/div/form/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "7"
+    }, {
+      "id": "18ea7289-feb6-4404-9880-c1f36d56eda2",
+      "comment": "",
+      "command": "type",
+      "target": "id=Valor",
+      "targets": [
+        ["id=Valor", "id"],
+        ["name=Valor", "name"],
+        ["css=#Valor", "css:finder"],
+        ["xpath=//input[@id='Valor']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/div/form/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "75"
+    }, {
+      "id": "7a2fa846-7c2b-4223-9856-07ad161a236e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-group > .btn",
+      "targets": [
+        ["css=.form-group > .btn", "css:finder"],
+        ["xpath=//input[@value='Create']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/div/form/div[6]/input", "xpath:idRelative"],
+        ["xpath=//div[6]/input", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "edff5a3e-faf6-4b91-950a-7e315783dc38",
+    "name": "AlterarDespesaValida",
+    "commands": [{
+      "id": "c2f09287-292c-4c88-b49e-75b60b947499",
+      "comment": "",
+      "command": "open",
+      "target": "https://localhost:44368/Despesas",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "87fd5d70-64e4-45af-8152-02c00d89fb47",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x768",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b02f2cd7-b82e-4c38-bef8-86ad9d45691c",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(2) .far",
+      "targets": [
+        ["css=tr:nth-child(2) .far", "css:finder"],
+        ["xpath=//div[@id='page-content-wrapper']/div/table/tbody/tr[2]/td[5]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Despesas/Edit/3')]", "xpath:href"],
+        ["xpath=//tr[2]/td[5]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e9996dd5-b87f-4d0a-a0ed-0f4007ace946",
+      "comment": "",
+      "command": "click",
+      "target": "id=Valor",
+      "targets": [
+        ["id=Valor", "id"],
+        ["name=Valor", "name"],
+        ["css=#Valor", "css:finder"],
+        ["xpath=//input[@id='Valor']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/div/form/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "205cd327-09f9-409e-8696-dc72ce9dd4f0",
+      "comment": "",
+      "command": "type",
+      "target": "id=Valor",
+      "targets": [
+        ["id=Valor", "id"],
+        ["name=Valor", "name"],
+        ["css=#Valor", "css:finder"],
+        ["xpath=//input[@id='Valor']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/div/form/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "74"
+    }, {
+      "id": "29acb03b-4af1-440a-ab19-04df8fb225bd",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-group > .btn",
+      "targets": [
+        ["css=.form-group > .btn", "css:finder"],
+        ["xpath=//input[@value='Save']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/div/form/div[6]/input", "xpath:idRelative"],
+        ["xpath=//div[6]/input", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "f1a51bdc-9be3-43d8-9468-610fdaeae18f",
+    "name": "DeletarDespesaValida",
+    "commands": [{
+      "id": "63b407ce-2482-4703-8e35-17fccd1077da",
+      "comment": "",
+      "command": "open",
+      "target": "https://localhost:44368/Despesas",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0b5c81e7-5ecc-4aa3-a460-79a6c8a03c1f",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x768",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "42555d00-4099-441d-8fa7-2cf78b7b7f91",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(2) .fa-trash",
+      "targets": [
+        ["css=tr:nth-child(2) .fa-trash", "css:finder"],
+        ["xpath=//div[@id='page-content-wrapper']/div/table/tbody/tr[2]/td[5]/a[3]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Despesas/Delete/3')]", "xpath:href"],
+        ["xpath=//tr[2]/td[5]/a[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "adfbfc12-d20d-4cf2-b24f-c13068d3f090",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-danger",
+      "targets": [
+        ["css=.btn-danger", "css:finder"],
+        ["xpath=//input[@value='Delete']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/form/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "01179887-97a4-4fcc-b5ac-e3e9b505fc6b",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://localhost:44368/", "https://localhost:44368/Despesas"],
+  "plugins": []
+}
