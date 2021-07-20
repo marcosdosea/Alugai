@@ -1,0 +1,793 @@
+{
+  "id": "a93d6157-23ff-4060-9bac-fa3cb5b52525",
+  "version": "2.0",
+  "name": "Pessoa",
+  "url": "https://localhost:44368",
+  "tests": [{
+    "id": "1a7b3c89-a0a6-4118-966c-a6127dc09e0b",
+    "name": "Inserir Pessoa Válida",
+    "commands": [{
+      "id": "ba1d2c41-a73f-4ca6-b789-6bf45ea84c9e",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "951ad9f4-4868-48e6-99d7-1ff2610bb110",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1616x876",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4850f2a5-78b8-49ee-b8af-632ec58997e3",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Entrar ou Cadastrar",
+      "targets": [
+        ["linkText=Entrar ou Cadastrar", "linkText"],
+        ["css=.ml-auto > .nav-item:nth-child(2) > .nav-link", "css:finder"],
+        ["xpath=//div[@id='nav-navegacao']/ul[2]/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Home/IndexMeusDados')]", "xpath:href"],
+        ["xpath=//ul[2]/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Entrar ou Cadastrar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7a46bdd3-ec54-4438-bb09-88c8230c0180",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Minha Conta",
+      "targets": [
+        ["linkText=Minha Conta", "linkText"],
+        ["css=.list-group-item:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Minha Conta')]", "xpath:link"],
+        ["xpath=//div[@id='sidebar-wrapper']/div[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Pessoa')]", "xpath:href"],
+        ["xpath=//div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Minha Conta')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5b48bffe-54b2-4d79-b279-6300fbcba796",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Cadastrar",
+      "targets": [
+        ["linkText=Cadastrar", "linkText"],
+        ["css=.btn-success", "css:finder"],
+        ["xpath=//a[contains(text(),'Cadastrar')]", "xpath:link"],
+        ["xpath=//div[@id='page-content-wrapper']/div/p/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Pessoa/Create')]", "xpath:href"],
+        ["xpath=//p/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Cadastrar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f99cb60f-9e19-4d74-b037-d280db56ffb4",
+      "comment": "",
+      "command": "click",
+      "target": "id=CodigoPessoa",
+      "targets": [
+        ["id=CodigoPessoa", "id"],
+        ["name=CodigoPessoa", "name"],
+        ["css=#CodigoPessoa", "css:finder"],
+        ["xpath=//input[@id='CodigoPessoa']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/form/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a9b0d574-146b-4427-8a90-f77eccc00acc",
+      "comment": "",
+      "command": "type",
+      "target": "id=CodigoPessoa",
+      "targets": [
+        ["id=CodigoPessoa", "id"],
+        ["name=CodigoPessoa", "name"],
+        ["css=#CodigoPessoa", "css:finder"],
+        ["xpath=//input[@id='CodigoPessoa']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/form/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "1"
+    }, {
+      "id": "e673564e-568d-42f5-be91-5a0a11da4802",
+      "comment": "",
+      "command": "click",
+      "target": "id=TipoPessoa",
+      "targets": [
+        ["id=TipoPessoa", "id"],
+        ["name=TipoPessoa", "name"],
+        ["css=#TipoPessoa", "css:finder"],
+        ["xpath=//select[@id='TipoPessoa']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/form/div/div[2]/div/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "22184103-0013-4068-8d3b-7336d008bcce",
+      "comment": "",
+      "command": "click",
+      "target": "id=TipoPessoa",
+      "targets": [
+        ["id=TipoPessoa", "id"],
+        ["name=TipoPessoa", "name"],
+        ["css=#TipoPessoa", "css:finder"],
+        ["xpath=//select[@id='TipoPessoa']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/form/div/div[2]/div/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bf46ee99-85b6-45d2-96f1-9c7347d383ff",
+      "comment": "",
+      "command": "click",
+      "target": "id=Nome",
+      "targets": [
+        ["id=Nome", "id"],
+        ["name=Nome", "name"],
+        ["css=#Nome", "css:finder"],
+        ["xpath=//input[@id='Nome']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/form/div/div[3]/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "234d329f-e449-4550-8f40-56deb48f762d",
+      "comment": "",
+      "command": "type",
+      "target": "id=Nome",
+      "targets": [
+        ["id=Nome", "id"],
+        ["name=Nome", "name"],
+        ["css=#Nome", "css:finder"],
+        ["xpath=//input[@id='Nome']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/form/div/div[3]/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/input", "xpath:position"]
+      ],
+      "value": "Maycon Douglas"
+    }, {
+      "id": "9e9046a1-9502-46cd-9e1c-b98126ac9763",
+      "comment": "",
+      "command": "click",
+      "target": "id=Email",
+      "targets": [
+        ["id=Email", "id"],
+        ["name=Email", "name"],
+        ["css=#Email", "css:finder"],
+        ["xpath=//input[@id='Email']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/form/div/div[4]/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "90309dee-f6af-47c7-bbc4-0de4c51c44ab",
+      "comment": "",
+      "command": "type",
+      "target": "id=Email",
+      "targets": [
+        ["id=Email", "id"],
+        ["name=Email", "name"],
+        ["css=#Email", "css:finder"],
+        ["xpath=//input[@id='Email']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/form/div/div[4]/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div/input", "xpath:position"]
+      ],
+      "value": "maycon@hotmail.com"
+    }, {
+      "id": "b926054a-af8b-434d-b9e1-bbacae9f999d",
+      "comment": "",
+      "command": "click",
+      "target": "id=Telefone",
+      "targets": [
+        ["id=Telefone", "id"],
+        ["name=Telefone", "name"],
+        ["css=#Telefone", "css:finder"],
+        ["xpath=//input[@id='Telefone']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/form/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "345d6ddb-868a-4fa9-b93b-88442631f216",
+      "comment": "",
+      "command": "type",
+      "target": "id=Telefone",
+      "targets": [
+        ["id=Telefone", "id"],
+        ["name=Telefone", "name"],
+        ["css=#Telefone", "css:finder"],
+        ["xpath=//input[@id='Telefone']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/form/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": "9999999999"
+    }, {
+      "id": "e9988e72-ff00-4777-a784-db481df2d39a",
+      "comment": "",
+      "command": "click",
+      "target": "id=Cpf",
+      "targets": [
+        ["id=Cpf", "id"],
+        ["name=Cpf", "name"],
+        ["css=#Cpf", "css:finder"],
+        ["xpath=//input[@id='Cpf']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/form/div[2]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fc5950cf-a00d-4099-b487-f49edd883627",
+      "comment": "",
+      "command": "type",
+      "target": "id=Cpf",
+      "targets": [
+        ["id=Cpf", "id"],
+        ["name=Cpf", "name"],
+        ["css=#Cpf", "css:finder"],
+        ["xpath=//input[@id='Cpf']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/form/div[2]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "88888888888"
+    }, {
+      "id": "15af3752-f9ea-4c06-883c-17e18ef90473",
+      "comment": "",
+      "command": "click",
+      "target": "id=Sexo",
+      "targets": [
+        ["id=Sexo", "id"],
+        ["name=Sexo", "name"],
+        ["css=#Sexo", "css:finder"],
+        ["xpath=//select[@id='Sexo']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/form/div[2]/div[3]/div/select", "xpath:idRelative"],
+        ["xpath=//div[3]/div/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "33ca4a9a-f179-4786-afa3-995da0f539fc",
+      "comment": "",
+      "command": "click",
+      "target": "id=Sexo",
+      "targets": [
+        ["id=Sexo", "id"],
+        ["name=Sexo", "name"],
+        ["css=#Sexo", "css:finder"],
+        ["xpath=//select[@id='Sexo']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/form/div[2]/div[3]/div/select", "xpath:idRelative"],
+        ["xpath=//div[3]/div/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ea596314-6794-4bda-8199-d9428e081508",
+      "comment": "",
+      "command": "click",
+      "target": "id=DataNascimento",
+      "targets": [
+        ["id=DataNascimento", "id"],
+        ["name=DataNascimento", "name"],
+        ["css=#DataNascimento", "css:finder"],
+        ["xpath=//input[@id='DataNascimento']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/form/div[2]/div[4]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[4]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4da60e70-cf69-420c-b5f8-b4c4b3a54e3a",
+      "comment": "",
+      "command": "type",
+      "target": "id=DataNascimento",
+      "targets": [
+        ["id=DataNascimento", "id"],
+        ["name=DataNascimento", "name"],
+        ["css=#DataNascimento", "css:finder"],
+        ["xpath=//input[@id='DataNascimento']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/form/div[2]/div[4]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[4]/div/input", "xpath:position"]
+      ],
+      "value": "0001-03-01"
+    }, {
+      "id": "37063b82-ffab-4a1a-b0af-11169e34d8ee",
+      "comment": "",
+      "command": "type",
+      "target": "id=DataNascimento",
+      "targets": [
+        ["id=DataNascimento", "id"],
+        ["name=DataNascimento", "name"],
+        ["css=#DataNascimento", "css:finder"],
+        ["xpath=//input[@id='DataNascimento']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/form/div[2]/div[4]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[4]/div/input", "xpath:position"]
+      ],
+      "value": "0019-03-01"
+    }, {
+      "id": "2c67b8f7-e959-48fb-800c-e18122a777d3",
+      "comment": "",
+      "command": "type",
+      "target": "id=DataNascimento",
+      "targets": [
+        ["id=DataNascimento", "id"],
+        ["name=DataNascimento", "name"],
+        ["css=#DataNascimento", "css:finder"],
+        ["xpath=//input[@id='DataNascimento']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/form/div[2]/div[4]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[4]/div/input", "xpath:position"]
+      ],
+      "value": "0199-03-01"
+    }, {
+      "id": "7a419b5e-000b-466d-8e7f-58c89a042501",
+      "comment": "",
+      "command": "type",
+      "target": "id=DataNascimento",
+      "targets": [
+        ["id=DataNascimento", "id"],
+        ["name=DataNascimento", "name"],
+        ["css=#DataNascimento", "css:finder"],
+        ["xpath=//input[@id='DataNascimento']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/form/div[2]/div[4]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[4]/div/input", "xpath:position"]
+      ],
+      "value": "1997-03-01"
+    }, {
+      "id": "ad585f41-d7ca-4b23-beee-cb9e9ba945cf",
+      "comment": "",
+      "command": "click",
+      "target": "id=Rg",
+      "targets": [
+        ["id=Rg", "id"],
+        ["name=Rg", "name"],
+        ["css=#Rg", "css:finder"],
+        ["xpath=//input[@id='Rg']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/form/div[2]/div[5]/div/input", "xpath:idRelative"],
+        ["xpath=//div[5]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4127c6d6-fe8f-4934-a40a-6e63b572c52c",
+      "comment": "",
+      "command": "type",
+      "target": "id=Rg",
+      "targets": [
+        ["id=Rg", "id"],
+        ["name=Rg", "name"],
+        ["css=#Rg", "css:finder"],
+        ["xpath=//input[@id='Rg']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/form/div[2]/div[5]/div/input", "xpath:idRelative"],
+        ["xpath=//div[5]/div/input", "xpath:position"]
+      ],
+      "value": "9999887655"
+    }, {
+      "id": "00b057b7-278c-44f0-b8ac-d3e10f0ba3d7",
+      "comment": "",
+      "command": "click",
+      "target": "id=Cep",
+      "targets": [
+        ["id=Cep", "id"],
+        ["name=Cep", "name"],
+        ["css=#Cep", "css:finder"],
+        ["xpath=//input[@id='Cep']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/form/div[3]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9db9d0c4-801c-4e65-9c48-ac2f764f365f",
+      "comment": "",
+      "command": "type",
+      "target": "id=Cep",
+      "targets": [
+        ["id=Cep", "id"],
+        ["name=Cep", "name"],
+        ["css=#Cep", "css:finder"],
+        ["xpath=//input[@id='Cep']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/form/div[3]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/input", "xpath:position"]
+      ],
+      "value": "789566666"
+    }, {
+      "id": "54428885-eb56-43b0-9d3d-34b5884d368f",
+      "comment": "",
+      "command": "click",
+      "target": "id=Rua",
+      "targets": [
+        ["id=Rua", "id"],
+        ["name=Rua", "name"],
+        ["css=#Rua", "css:finder"],
+        ["xpath=//input[@id='Rua']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/form/div[3]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "190d6db8-2d3a-445e-ad2c-7c010604e2b3",
+      "comment": "",
+      "command": "type",
+      "target": "id=Rua",
+      "targets": [
+        ["id=Rua", "id"],
+        ["name=Rua", "name"],
+        ["css=#Rua", "css:finder"],
+        ["xpath=//input[@id='Rua']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/form/div[3]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "rua A"
+    }, {
+      "id": "60791498-d73c-49db-b9c4-e30e0310191a",
+      "comment": "",
+      "command": "click",
+      "target": "id=NumeroDoEndereco",
+      "targets": [
+        ["id=NumeroDoEndereco", "id"],
+        ["name=NumeroDoEndereco", "name"],
+        ["css=#NumeroDoEndereco", "css:finder"],
+        ["xpath=//input[@id='NumeroDoEndereco']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/form/div[3]/div[3]/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[3]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ef34dffe-b337-4ea7-bf0d-205c758b3a52",
+      "comment": "",
+      "command": "type",
+      "target": "id=NumeroDoEndereco",
+      "targets": [
+        ["id=NumeroDoEndereco", "id"],
+        ["name=NumeroDoEndereco", "name"],
+        ["css=#NumeroDoEndereco", "css:finder"],
+        ["xpath=//input[@id='NumeroDoEndereco']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/form/div[3]/div[3]/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[3]/div/input", "xpath:position"]
+      ],
+      "value": "23"
+    }, {
+      "id": "6c4fc25a-27d5-4dcc-82d3-bf2e5730052d",
+      "comment": "",
+      "command": "click",
+      "target": "id=EstadoUf",
+      "targets": [
+        ["id=EstadoUf", "id"],
+        ["name=EstadoUf", "name"],
+        ["css=#EstadoUf", "css:finder"],
+        ["xpath=//input[@id='EstadoUf']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/form/div[4]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9b1f092c-0e53-4199-b108-3957e5b01559",
+      "comment": "",
+      "command": "type",
+      "target": "id=EstadoUf",
+      "targets": [
+        ["id=EstadoUf", "id"],
+        ["name=EstadoUf", "name"],
+        ["css=#EstadoUf", "css:finder"],
+        ["xpath=//input[@id='EstadoUf']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/form/div[4]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/input", "xpath:position"]
+      ],
+      "value": "SE"
+    }, {
+      "id": "f6eaacba-0ae7-40e1-9385-6f13f4eaab49",
+      "comment": "",
+      "command": "click",
+      "target": "id=Cidade",
+      "targets": [
+        ["id=Cidade", "id"],
+        ["name=Cidade", "name"],
+        ["css=#Cidade", "css:finder"],
+        ["xpath=//input[@id='Cidade']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/form/div[4]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ddbafc91-3e30-4f48-8f1b-f22b57eafee0",
+      "comment": "",
+      "command": "type",
+      "target": "id=Cidade",
+      "targets": [
+        ["id=Cidade", "id"],
+        ["name=Cidade", "name"],
+        ["css=#Cidade", "css:finder"],
+        ["xpath=//input[@id='Cidade']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/form/div[4]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "Itabaiana"
+    }, {
+      "id": "32572b4c-735b-4399-96b4-172b72e1434f",
+      "comment": "",
+      "command": "click",
+      "target": "id=Bairro",
+      "targets": [
+        ["id=Bairro", "id"],
+        ["name=Bairro", "name"],
+        ["css=#Bairro", "css:finder"],
+        ["xpath=//input[@id='Bairro']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/form/div[4]/div[3]/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[3]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cbf76032-291b-4a1b-a40f-3eec780cccc1",
+      "comment": "",
+      "command": "type",
+      "target": "id=Bairro",
+      "targets": [
+        ["id=Bairro", "id"],
+        ["name=Bairro", "name"],
+        ["css=#Bairro", "css:finder"],
+        ["xpath=//input[@id='Bairro']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/form/div[4]/div[3]/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[3]/div/input", "xpath:position"]
+      ],
+      "value": "Centro"
+    }, {
+      "id": "ef075535-3d48-4376-bbb5-a1a46113ad44",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-group > .btn",
+      "targets": [
+        ["css=.form-group > .btn", "css:finder"],
+        ["xpath=//input[@value='Cadastrar']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/form/div[5]/div/input", "xpath:idRelative"],
+        ["xpath=//form/div[5]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "c3a37936-70f6-4661-b005-811a7ebbae3c",
+    "name": "Alterar Pessoa Válida",
+    "commands": [{
+      "id": "d0ad58f3-4f79-424d-9443-4b269355ddb0",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "867988cf-b9f4-470c-9412-11b2b045ee95",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1616x876",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "17e11216-a7e2-4b15-b9a8-e9da3dca7c81",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Entrar ou Cadastrar",
+      "targets": [
+        ["linkText=Entrar ou Cadastrar", "linkText"],
+        ["css=.ml-auto > .nav-item:nth-child(2) > .nav-link", "css:finder"],
+        ["xpath=//div[@id='nav-navegacao']/ul[2]/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Home/IndexMeusDados')]", "xpath:href"],
+        ["xpath=//ul[2]/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Entrar ou Cadastrar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bf7e3a8b-783e-42ea-8854-66872e4e13da",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Minha Conta",
+      "targets": [
+        ["linkText=Minha Conta", "linkText"],
+        ["css=.list-group-item:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Minha Conta')]", "xpath:link"],
+        ["xpath=//div[@id='sidebar-wrapper']/div[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Pessoa')]", "xpath:href"],
+        ["xpath=//div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Minha Conta')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0f8fa4e6-769d-4b10-9114-0944ef727de3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.far",
+      "targets": [
+        ["css=.far", "css:finder"],
+        ["xpath=//div[@id='page-content-wrapper']/div/table/tbody/tr/td[5]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Pessoa/Edit/1')]", "xpath:href"],
+        ["xpath=//td[5]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "34fddf1a-634a-40c1-be33-d9e17ac7a922",
+      "comment": "",
+      "command": "click",
+      "target": "id=Cep",
+      "targets": [
+        ["id=Cep", "id"],
+        ["name=Cep", "name"],
+        ["css=#Cep", "css:finder"],
+        ["xpath=//input[@id='Cep']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/div/form/div[13]/input", "xpath:idRelative"],
+        ["xpath=//div[13]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "691f5598-2ca1-443e-8472-66f7145bd98b",
+      "comment": "",
+      "command": "type",
+      "target": "id=Cep",
+      "targets": [
+        ["id=Cep", "id"],
+        ["name=Cep", "name"],
+        ["css=#Cep", "css:finder"],
+        ["xpath=//input[@id='Cep']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/div/form/div[13]/input", "xpath:idRelative"],
+        ["xpath=//div[13]/input", "xpath:position"]
+      ],
+      "value": "345000"
+    }, {
+      "id": "9ccaa396-0d9a-47d9-a46d-9f2fb43320a5",
+      "comment": "",
+      "command": "click",
+      "target": "id=DataNascimento",
+      "targets": [
+        ["id=DataNascimento", "id"],
+        ["name=DataNascimento", "name"],
+        ["css=#DataNascimento", "css:finder"],
+        ["xpath=//input[@id='DataNascimento']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/div/form/div[8]/input", "xpath:idRelative"],
+        ["xpath=//div[8]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0a0d8b17-1d43-4fef-b008-b488b0d2bf58",
+      "comment": "",
+      "command": "type",
+      "target": "id=DataNascimento",
+      "targets": [
+        ["id=DataNascimento", "id"],
+        ["name=DataNascimento", "name"],
+        ["css=#DataNascimento", "css:finder"],
+        ["xpath=//input[@id='DataNascimento']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/div/form/div[8]/input", "xpath:idRelative"],
+        ["xpath=//div[8]/input", "xpath:position"]
+      ],
+      "value": "0001-03-01"
+    }, {
+      "id": "5863bbb5-dd66-4bf8-b5fb-195908859062",
+      "comment": "",
+      "command": "type",
+      "target": "id=DataNascimento",
+      "targets": [
+        ["id=DataNascimento", "id"],
+        ["name=DataNascimento", "name"],
+        ["css=#DataNascimento", "css:finder"],
+        ["xpath=//input[@id='DataNascimento']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/div/form/div[8]/input", "xpath:idRelative"],
+        ["xpath=//div[8]/input", "xpath:position"]
+      ],
+      "value": "0019-03-01"
+    }, {
+      "id": "4bb86497-c586-44be-88e8-b4377aef9783",
+      "comment": "",
+      "command": "type",
+      "target": "id=DataNascimento",
+      "targets": [
+        ["id=DataNascimento", "id"],
+        ["name=DataNascimento", "name"],
+        ["css=#DataNascimento", "css:finder"],
+        ["xpath=//input[@id='DataNascimento']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/div/form/div[8]/input", "xpath:idRelative"],
+        ["xpath=//div[8]/input", "xpath:position"]
+      ],
+      "value": "0199-03-01"
+    }, {
+      "id": "7dafa4ac-ce01-460c-aec6-00437019b84f",
+      "comment": "",
+      "command": "type",
+      "target": "id=DataNascimento",
+      "targets": [
+        ["id=DataNascimento", "id"],
+        ["name=DataNascimento", "name"],
+        ["css=#DataNascimento", "css:finder"],
+        ["xpath=//input[@id='DataNascimento']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/div/form/div[8]/input", "xpath:idRelative"],
+        ["xpath=//div[8]/input", "xpath:position"]
+      ],
+      "value": "1997-03-01"
+    }, {
+      "id": "531601a6-4725-4a51-b162-dbaf69d89395",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-group > .btn",
+      "targets": [
+        ["css=.form-group > .btn", "css:finder"],
+        ["xpath=//input[@value='Save']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/div/form/div[17]/input", "xpath:idRelative"],
+        ["xpath=//div[17]/input", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "3c72d2a5-7e4e-46e0-b213-1681660f3310",
+    "name": "Deletar Pessoa Válida",
+    "commands": [{
+      "id": "1487a158-597a-47aa-9b92-f634f9ad6308",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bf9e931a-f1dc-4d6b-b816-0e613bfdf208",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1616x876",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8d56dcad-6e8a-492d-b3d2-e57810de3260",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Entrar ou Cadastrar",
+      "targets": [
+        ["linkText=Entrar ou Cadastrar", "linkText"],
+        ["css=.ml-auto > .nav-item:nth-child(2) > .nav-link", "css:finder"],
+        ["xpath=//div[@id='nav-navegacao']/ul[2]/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Home/IndexMeusDados')]", "xpath:href"],
+        ["xpath=//ul[2]/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Entrar ou Cadastrar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c71af6f6-ba44-4a5a-a4ad-bef01229d9c0",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Minha Conta",
+      "targets": [
+        ["linkText=Minha Conta", "linkText"],
+        ["css=.list-group-item:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Minha Conta')]", "xpath:link"],
+        ["xpath=//div[@id='sidebar-wrapper']/div[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Pessoa')]", "xpath:href"],
+        ["xpath=//div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Minha Conta')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e2fa7f3b-a59d-4f48-8a66-31c9563fc68f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.fa-trash",
+      "targets": [
+        ["css=.fa-trash", "css:finder"],
+        ["xpath=//div[@id='page-content-wrapper']/div/table/tbody/tr/td[5]/a[3]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Pessoa/Delete/1')]", "xpath:href"],
+        ["xpath=//td[5]/a[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4b671a4e-5439-4460-a41f-f89fd4f1920f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-danger",
+      "targets": [
+        ["css=.btn-danger", "css:finder"],
+        ["xpath=//input[@value='Delete']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/form/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "8acdfc5a-76b4-47be-ac60-eee785c9d377",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://localhost:44368/"],
+  "plugins": []
+}
