@@ -3,7 +3,6 @@
 @{
     ViewData["Title"] = "Create";
     Layout = "_MeusDados";
-
 }
 
 <hr />
@@ -22,7 +21,7 @@
             <div class="col-md-2">  
                 <div class="form-group">
                     <label asp-for="TipoPessoa"></label>
-                    <select asp-for="TipoPessoa" class="form-control" id="TipoPessoa">
+                    <select asp-for="TipoPessoa" class="form-select" id="TipoPessoa">
                         <option value="1">FISICA</option>
                         <option value="2">JURIDICA</option>
                     </select>
@@ -67,7 +66,7 @@
             <div class="col-md-2">
                 <div class="form-group">
                     <label asp-for="Sexo"></label>
-                    <select asp-for="Sexo" class="form-control" id="Sexo">
+                    <select asp-for="Sexo" class="form-select" id="Sexo">
                         <option value="MASCULINO">MASCULINO</option>
                         <option value="FEMININO">FEMININO</option>
                     </select>
@@ -157,15 +156,13 @@
             </div>
         </div>
         
-        <div class="row ml-1">
-            <div class="form-group">
-                <input type="submit" value="Cadastrar" class="btn btn-primary" />
+        <div class="row mt-3">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <input type="submit" value="Cadastrar" class="btn btn-primary" />
+                    <a class="btn btn-light ml-2" asp-action="Index">Voltar</a>
+                </div>
             </div>
-            
-            <div>
-                <a class="btn btn-light ml-2" asp-action="Index">Voltar</a>
-            </div>
-
         </div>
 
     </form>
