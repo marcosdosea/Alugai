@@ -30,16 +30,18 @@
                 <select asp-for="CodigoPessoa" asp-items="ViewBag.IdPessoa" class="form-control"></select>
                 <span asp-validation-for="CodigoPessoa" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+            <div class="row mt-3">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="submit" value="Cadastrar" class="btn btn-primary" />
+                        <a class="btn btn-light ml-2" asp-action="Index">Voltar</a>
+                    </div>
+                </div>
             </div>
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
