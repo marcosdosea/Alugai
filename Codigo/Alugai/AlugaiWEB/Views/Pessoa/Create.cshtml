@@ -12,14 +12,6 @@
         <div class="row">
             <div class="col-md-2">  
                 <div class="form-group">
-                    <label asp-for="CodigoPessoa" class="control-label"></label>
-                    <input asp-for="CodigoPessoa" class="form-control" />
-                    <span asp-validation-for="CodigoPessoa" class="text-danger"></span>
-                </div>
-            </div>
-
-            <div class="col-md-2">  
-                <div class="form-group">
                     <label asp-for="TipoPessoa"></label>
                     <select asp-for="TipoPessoa" class="form-select" id="TipoPessoa">
                         <option value="1">FISICA</option>
@@ -44,9 +36,7 @@
                     <span asp-validation-for="Email" class="text-danger"></span>
                 </div>
             </div>
-        </div>
-                
-        <div class="row">
+
             <div class="col-md-2">
                 <div class="form-group">
                     <label asp-for="Telefone" class="control-label"></label>
@@ -54,7 +44,9 @@
                     <span asp-validation-for="Telefone" class="text-danger"></span>
                 </div>
             </div>
-
+        </div>
+                
+        <div class="row">
             <div class="col-md-2">
                 <div class="form-group">
                     <label asp-for="Cpf" class="control-label"></label>
