@@ -22,7 +22,7 @@
                 @Html.DisplayNameFor(model => model.TipoDeAnuncio)
             </th>
 
-            <th></th>
+            <th>Ações</th>
         </tr>
     </thead>
     <tbody>
@@ -38,10 +38,17 @@
                 @Html.DisplayFor(modelItem => item.TipoDeAnuncio)
             </td>
 
-            <td>
-                @Html.ActionLink("", "Edit", new { id = item.CodigoAnuncio }, new { @class = "far fa-edit text-warning" })
-                @Html.ActionLink("", "Details", new { id = item.CodigoAnuncio }, new { @class = "fas fa-info-circle text-primary" })
-                @Html.ActionLink("", "Delete", new { id = item.CodigoAnuncio }, new { @class = "fas fa-trash text-danger" })
+            <td style="width: 5%; text-align:center;">
+                <div class="dropdown">
+                    <button style="width: 40px" class="btn btn-light" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-ellipsis-v"></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li>@Html.ActionLink("Editar", "Edit", new { id = item.CodigoAnuncio }, new { @class = "dropdown-item"})</li>                        
+                        <li>@Html.ActionLink("Detalhes", "Details", new { id = item.CodigoAnuncio }, new { @class = "dropdown-item"})</li>
+                        <li>@Html.ActionLink("Deletar", "Delete", new { id = item.CodigoAnuncio }, new { @class = "dropdown-item"})</li>
+                    </ul>
+                </div>
             </td>
         </tr>
 }
