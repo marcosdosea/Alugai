@@ -39,7 +39,7 @@ namespace AlugaiWEB.Models
 
         [Display(Name = "Data Nascimento")]
         [DataType(DataType.Date, ErrorMessage = "Data válida requerida")]
-        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime DataNascimento { get; set; }
 
         [Display(Name = "RG")]
