@@ -11,7 +11,7 @@ namespace AlugaiWEB.Models
 
         [Display(Name = "DT. Pagamento")]
         [DataType(DataType.Date, ErrorMessage = "Data válida requerida")]
-        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime DataPagamento { get; set; }
 
         [Display(Name = "Valor do Aluguel")]

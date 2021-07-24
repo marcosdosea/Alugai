@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using AlugaiWEB.Models;
 using System;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace AlugaiWEB.Controllers
 {
@@ -12,7 +13,6 @@ namespace AlugaiWEB.Controllers
     {
         IImovelService _imovelService;
         IMapper _mapper;
-
         public ImovelController(IImovelService imovelService, IMapper mapper)
         {
             _imovelService = imovelService;
@@ -27,7 +27,6 @@ namespace AlugaiWEB.Controllers
             return View(listarImoveisModel);
         }
 
-
         public ActionResult Details(int id)
         {
             Imovel imovel = _imovelService.Buscar(id);
@@ -36,9 +35,23 @@ namespace AlugaiWEB.Controllers
             return View(imovelModel);
         }
 
-        
+
         public ActionResult Create()
         {
+
+            var tiposImoveis = new[]
+            {
+                new SelectListItem { Value = "Apartamento", Text = "Apartamento" },
+                new SelectListItem { Value = "Casa", Text = "Casa" },
+                new SelectListItem { Value = "Casa de condominio", Text = "Casa de Condominio" },
+                new SelectListItem { Value = "Garagem", Text = "Garagem" },
+                new SelectListItem { Value = "Galpão/Depósito", Text = "Galpão/Depósito" },
+                new SelectListItem { Value = "Terreno/Lote", Text = "Terreno/Lote" },
+                new SelectListItem { Value = "Loja/Salão", Text = "Loja/Salão" },
+            };
+
+            ViewBag.TiposImoveis = new SelectList(tiposImoveis, "Value", "Text");
+            
             return View();
         }
 
@@ -55,7 +68,6 @@ namespace AlugaiWEB.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        
         public ActionResult Edit(int id)
         {
             Imovel imovel = _imovelService.Buscar(id);
