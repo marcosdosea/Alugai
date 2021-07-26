@@ -9,6 +9,16 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <link rel="stylesheet" href="~/css/style.css" />
 
+    <!-- Smartlook - Usability Test -->
+    <script type='text/javascript'>
+        window.smartlook || (function (d) {
+            var o = smartlook = function () { o.api.push(arguments) }, h = d.getElementsByTagName('head')[0];
+            var c = d.createElement('script'); o.api = new Array(); c.async = true; c.type = 'text/javascript';
+            c.charset = 'utf-8'; c.src = 'https://rec.smartlook.com/recorder.js'; h.appendChild(c);
+        })(document);
+        smartlook('init', '6b973b8a8a1e447616ee7bd3c89e3d580e8c0f40');
+    </script>
+
 </head>
 <body>
     <header>
@@ -28,7 +38,7 @@
                     <!--Inicio Barra de navegação-->
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a href="" class="nav-link">Anunciar</a>
+                            <a asp-controller="Anuncio" asp-action="Index" class="nav-link">Anunciar</a>
                         </li>
 
                         <li>

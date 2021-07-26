@@ -449,12 +449,6 @@ namespace Core
                     .HasMaxLength(45)
                     .IsUnicode(false);
 
-                entity.Property(e => e.Senha)
-                    .IsRequired()
-                    .HasColumnName("senha")
-                    .HasMaxLength(20)
-                    .IsUnicode(false);
-
                 entity.Property(e => e.Sexo)
                     .IsRequired()
                     .HasColumnName("sexo")

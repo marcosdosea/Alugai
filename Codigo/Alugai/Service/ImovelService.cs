@@ -2,6 +2,8 @@
 using System.Linq;
 using Core;
 using Core.Services;
+using Microsoft.EntityFrameworkCore;
+using Service.Exceptions;
 
 namespace Service
 {
@@ -26,9 +28,17 @@ namespace Service
         }
         public void Excluir(int CodigoImovel)
         {
-            var _imovel = _context.Imovel.Find(CodigoImovel);
-            _context.Imovel.Remove(_imovel);
-            _context.SaveChanges();
+            try
+            {
+                var _imovel = _context.Imovel.Find(CodigoImovel);
+                _context.Imovel.Remove(_imovel);
+                _context.SaveChanges();
+            }
+            catch(DbUpdateException)
+            {
+                throw new IntegridadeException("Erro: Não foi possível deletar o imóvel, o mesmo tem registros em uso.");
+            }
+            
         }
         private IQueryable<Imovel> GetQuery()
         {
