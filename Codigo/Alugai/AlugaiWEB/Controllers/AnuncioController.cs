@@ -4,6 +4,7 @@ using Core;
 using Core.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using System;
 using System.Collections.Generic;
 
 namespace AlugaiWEB.Controllers
@@ -58,6 +59,9 @@ namespace AlugaiWEB.Controllers
             if (ModelState.IsValid)
             {
                 var anuncio = _mapper.Map<Anuncio>(anuncioModel);
+
+                anuncio.Data = DateTime.Now;
+
                 _anuncioService.Inserir(anuncio);
             }
             return RedirectToAction(nameof(Index));
@@ -72,7 +76,7 @@ namespace AlugaiWEB.Controllers
             IEnumerable<Pessoa> listarPessoas = _pessoaService.ObterTodos();
 
             ViewBag.IdImovel = new SelectList(listarImoveis, "CodigoImovel", "Descricao", null);
-            ViewBag.IdPessoa = new SelectList(listarPessoas, "CodigoPessoa", "nome", null);
+            ViewBag.IdPessoa = new SelectList(listarPessoas, "CodigoPessoa", "Nome", null);
 
             return View(anuncioModel);
         }

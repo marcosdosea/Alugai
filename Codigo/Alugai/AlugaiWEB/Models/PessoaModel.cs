@@ -19,11 +19,6 @@ namespace AlugaiWEB.Models
         [Required(ErrorMessage = "Campo Obrigatório")]
         public string Email { get; set; }
 
-        [Display(Name = "Senha")]
-        [StringLength(20, MinimumLength = 8, ErrorMessage = "O nome deve ter entre 8 e 20 caracteres")]
-        [Required(ErrorMessage = "Campo Obrigatório")]
-        public string Senha { get; set; }
-
         [Display(Name = "Telefone")]
         [StringLength(20, MinimumLength = 8, ErrorMessage = "O nome deve ter entre 8 e 20 caracteres")]
         [Required(ErrorMessage = "Campo Obrigatório")]

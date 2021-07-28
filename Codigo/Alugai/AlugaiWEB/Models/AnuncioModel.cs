@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace AlugaiWEB.Models
 {
@@ -18,6 +19,11 @@ namespace AlugaiWEB.Models
         [StringLength(15, MinimumLength = 3, ErrorMessage = "Tipo De Anuncio deve conter entre 3 e 15 caracteres")]
         [Required(ErrorMessage = "Campo Obrigatório")]
         public string TipoDeAnuncio { get; set; }
+
+        [Display(Name = "Data")]
+        [DataType(DataType.Date, ErrorMessage = "Data válida requerida")]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
+        public DateTime Data { get; set; }
 
         [Display(Name = "Imóvel")]
         [Required(ErrorMessage = "Imóvel é Obrigatório")]
