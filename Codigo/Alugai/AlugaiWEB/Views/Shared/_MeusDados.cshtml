@@ -44,7 +44,7 @@
                         <li>
                             <div class="dropdown logoff" style="margin: auto 0;">
                                 <a class="nav-link dropdown-toggle" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <img class="user-img" src="../imagens/user.png" >
+                                    <img class="user-img" src="../imagens/user.png">
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
                                     <a class="dropdown-item" href="/">Sair</a>
@@ -96,6 +96,7 @@
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery.inputmask.js"></script>
     <script src="~/lib/bootstrap5/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
@@ -109,3 +110,5 @@
         $("#wrapper").toggleClass("toggled");
     });
 </script>
+
+

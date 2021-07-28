@@ -7,10 +7,10 @@
 
 <hr />
 <div class="">
-    <form asp-action="Create"> 
+    <form asp-action="Create">
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
         <div class="row">
-            <div class="col-md-2">  
+            <div class="col-md-2">
                 <div class="form-group">
                     <label asp-for="TipoPessoa"></label>
                     <select asp-for="TipoPessoa" class="form-select" id="TipoPessoa">
@@ -40,17 +40,17 @@
             <div class="col-md-2">
                 <div class="form-group">
                     <label asp-for="Telefone" class="control-label"></label>
-                    <input asp-for="Telefone" class="form-control" />
+                    <input id="telefone" asp-for="Telefone" class="form-control" />
                     <span asp-validation-for="Telefone" class="text-danger"></span>
                 </div>
             </div>
         </div>
-                
+
         <div class="row">
             <div class="col-md-2">
                 <div class="form-group">
                     <label asp-for="Cpf" class="control-label"></label>
-                    <input asp-for="Cpf" class="form-control" />
+                    <input id="cpf" asp-for="Cpf" class="form-control" />
                     <span asp-validation-for="Cpf" class="text-danger"></span>
                 </div>
             </div>
@@ -88,7 +88,7 @@
             <div class="col-md-2">
                 <div class="form-group">
                     <label asp-for="Cep" class="control-label"></label>
-                    <input asp-for="Cep" class="form-control" />
+                    <input id="cep" asp-for="Cep" class="form-control" name="cep" />
                     <span asp-validation-for="Cep" class="text-danger"></span>
                 </div>
             </div>
@@ -96,7 +96,7 @@
             <div class="col-md-8">
                 <div class="form-group">
                     <label asp-for="Rua" class="control-label"></label>
-                    <input asp-for="Rua" class="form-control" />
+                    <input asp-for="Rua" class="form-control" name="rua" />
                     <span asp-validation-for="Rua" class="text-danger"></span>
                 </div>
             </div>
@@ -115,7 +115,7 @@
             <div class="col-md-2">
                 <div class="form-group">
                     <label asp-for="EstadoUf" class="control-label"></label>
-                    <input asp-for="EstadoUf" class="form-control" />
+                    <input asp-for="EstadoUf" class="form-control" name="uf" />
                     <span asp-validation-for="EstadoUf" class="text-danger"></span>
                 </div>
             </div>
@@ -123,7 +123,7 @@
             <div class="col-md-4">
                 <div class="form-group">
                     <label asp-for="Cidade" class="control-label"></label>
-                    <input asp-for="Cidade" class="form-control" />
+                    <input asp-for="Cidade" class="form-control" name="cidade" />
                     <span asp-validation-for="Cidade" class="text-danger"></span>
                 </div>
             </div>
@@ -131,16 +131,16 @@
             <div class="col-md-4">
                 <div class="form-group">
                     <label asp-for="Bairro" class="control-label"></label>
-                    <input asp-for="Bairro" class="form-control" />
+                    <input asp-for="Bairro" class="form-control" name="bairro" />
                     <span asp-validation-for="Bairro" class="text-danger"></span>
                 </div>
             </div>
 
             <div class="col-md-2">
-                
+
             </div>
         </div>
-        
+
         <div class="row mt-3">
             <div class="col-md-6">
                 <div class="form-group">
@@ -155,4 +155,17 @@
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <script>
+
+        $(document).ready(function () {
+            $("#cpf").inputmask('999.999.999-99');
+            $("#telefone").inputmask('(99) 9 9999-9999');
+            $("#cep").inputmask('99999-999');
+        });
+
+    </script>
+
 }
+
+
