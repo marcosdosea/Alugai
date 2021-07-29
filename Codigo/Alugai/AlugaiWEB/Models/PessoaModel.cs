@@ -16,12 +16,10 @@ namespace AlugaiWEB.Models
 
         [Display(Name = "E-mail")]
         [StringLength(50, MinimumLength = 10, ErrorMessage = "O nome deve ter entre 10 e 50 caracteres")]
-        [Required(ErrorMessage = "Campo Obrigatório")]
         public string Email { get; set; }
 
         [Display(Name = "Telefone")]
         [StringLength(20, MinimumLength = 8, ErrorMessage = "O nome deve ter entre 8 e 20 caracteres")]
-        [Required(ErrorMessage = "Campo Obrigatório")]
         public string Telefone { get; set; }
 
         [Display(Name = "CPF")]
@@ -35,11 +33,11 @@ namespace AlugaiWEB.Models
         [Display(Name = "Data Nascimento")]
         [DataType(DataType.Date, ErrorMessage = "Data válida requerida")]
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
+        [Required(ErrorMessage = "Campo Obrigatório")]
         public DateTime DataNascimento { get; set; }
 
         [Display(Name = "RG")]
         [StringLength(15, MinimumLength = 5, ErrorMessage = "O nome deve ter entre 5 e 15 caracteres")]
-        [Required(ErrorMessage = "Campo Obrigatório")]
         public string Rg { get; set; }
 
         [Display(Name = "Rua")]

@@ -20,15 +20,11 @@
                     <span asp-validation-for="TipoImovel" class="text-danger"></span>
                 </div>
             </div>
-
-            @* <div class="col-md-2">
-
-            </div> *@
             
             <div class="col-md-3">
                 <div class="form-group">
                     <label asp-for="ValorDoAluguel" class="control-label"></label>
-                    <input asp-for="ValorDoAluguel" class="form-control" />
+                    <input  asp-for="ValorDoAluguel" class="form-control" asp-format="{0:#,###.00}"/>
                     <span asp-validation-for="ValorDoAluguel" class="text-danger"></span>
                 </div>
             </div>
@@ -36,7 +32,7 @@
             <div class="col-md-3">
                 <div class="form-group">
                     <label asp-for="ValorDoCondominio" class="control-label"></label>
-                    <input asp-for="ValorDoCondominio" class="form-control" />
+                    <input asp-for="ValorDoCondominio" class="form-control" asp-format="{0:N2}" />
                     <span asp-validation-for="ValorDoCondominio" class="text-danger"></span>
                 </div>
             </div>
@@ -44,7 +40,7 @@
             <div class="col-md-3">
                 <div class="form-group">
                     <label asp-for="ValorDoIptu" class="control-label"></label>
-                    <input asp-for="ValorDoIptu" class="form-control" />
+                    <input asp-for="ValorDoIptu" class="form-control" asp-format="{0:N2}" />
                     <span asp-validation-for="ValorDoIptu" class="text-danger"></span>
                 </div>
             </div>
@@ -56,7 +52,7 @@
             <div class="col-md-3">
                 <div class="form-group">
                     <label asp-for="Cep" class="control-label"></label>
-                    <input asp-for="Cep" class="form-control" />
+                    <input onblur="pesquisacep(this.value);" id="cep" asp-for="Cep" class="form-control" />
                     <span asp-validation-for="Cep" class="text-danger"></span>
                 </div>
             </div>
@@ -64,7 +60,7 @@
             <div class="col-md-6">
                 <div class="form-group">
                     <label asp-for="Rua" class="control-label"></label>
-                    <input asp-for="Rua" class="form-control" />
+                    <input id="rua" asp-for="Rua" class="form-control" />
                     <span asp-validation-for="Rua" class="text-danger"></span>
                 </div>
             </div>
@@ -84,7 +80,7 @@
             <div class="col-md-3">
                 <div class="form-group">
                     <label asp-for="Bairro" class="control-label"></label>
-                    <input asp-for="Bairro" class="form-control" />
+                    <input id="bairro" asp-for="Bairro" class="form-control" />
                     <span asp-validation-for="Bairro" class="text-danger"></span>
                 </div>
             </div>
@@ -92,7 +88,7 @@
             <div class="col-md-3">
                 <div class="form-group">
                     <label asp-for="Cidade" class="control-label"></label>
-                    <input asp-for="Cidade" class="form-control" />
+                    <input id="cidade" asp-for="Cidade" class="form-control" />
                     <span asp-validation-for="Cidade" class="text-danger"></span>
                 </div>
             </div>
@@ -100,7 +96,7 @@
             <div class="col-md-3">
                 <div class="form-group">
                     <label asp-for="EstadoUf" class="control-label"></label>
-                    <input asp-for="EstadoUf" class="form-control" />
+                    <input id="uf" asp-for="EstadoUf" class="form-control" />
                     <span asp-validation-for="EstadoUf" class="text-danger"></span>
                 </div>
             </div>
@@ -216,4 +212,12 @@
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <script>
+
+        $(document).ready(function () {
+            $("#cep").inputmask('99999-999');
+        });
+
+    </script>
 }

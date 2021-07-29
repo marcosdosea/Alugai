@@ -88,7 +88,7 @@
             <div class="col-md-2">
                 <div class="form-group">
                     <label asp-for="Cep" class="control-label"></label>
-                    <input id="cep" asp-for="Cep" class="form-control" name="cep" />
+                    <input onblur="pesquisacep(this.value);" id="cep" asp-for="Cep" class="form-control" name="cep" />
                     <span asp-validation-for="Cep" class="text-danger"></span>
                 </div>
             </div>
@@ -96,7 +96,7 @@
             <div class="col-md-8">
                 <div class="form-group">
                     <label asp-for="Rua" class="control-label"></label>
-                    <input asp-for="Rua" class="form-control" name="rua" />
+                    <input id="rua" asp-for="Rua" class="form-control" name="rua" />
                     <span asp-validation-for="Rua" class="text-danger"></span>
                 </div>
             </div>
@@ -115,7 +115,7 @@
             <div class="col-md-2">
                 <div class="form-group">
                     <label asp-for="EstadoUf" class="control-label"></label>
-                    <input asp-for="EstadoUf" class="form-control" name="uf" />
+                    <input id="uf" asp-for="EstadoUf" class="form-control" name="uf" />
                     <span asp-validation-for="EstadoUf" class="text-danger"></span>
                 </div>
             </div>
@@ -123,7 +123,7 @@
             <div class="col-md-4">
                 <div class="form-group">
                     <label asp-for="Cidade" class="control-label"></label>
-                    <input asp-for="Cidade" class="form-control" name="cidade" />
+                    <input id="cidade" asp-for="Cidade" class="form-control" name="cidade" />
                     <span asp-validation-for="Cidade" class="text-danger"></span>
                 </div>
             </div>
@@ -131,7 +131,7 @@
             <div class="col-md-4">
                 <div class="form-group">
                     <label asp-for="Bairro" class="control-label"></label>
-                    <input asp-for="Bairro" class="form-control" name="bairro" />
+                    <input id="bairro" asp-for="Bairro" class="form-control" name="bairro" />
                     <span asp-validation-for="Bairro" class="text-danger"></span>
                 </div>
             </div>
@@ -163,6 +163,8 @@
             $("#telefone").inputmask('(99) 9 9999-9999');
             $("#cep").inputmask('99999-999');
         });
+
+     
 
     </script>
 
