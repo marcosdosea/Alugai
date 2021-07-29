@@ -44,9 +44,11 @@ namespace AlugaiWEB.Models
         public double ValorDoAluguel { get; set; }
 
         [Display(Name = "Valor do Condominio")]
+        [DisplayFormat(DataFormatString = "{0:F2}")]
         public double? ValorDoCondominio { get; set; }
 
         [Display(Name = "Valor do IPTU")]
+        [DisplayFormat(DataFormatString = "{0:F2}")]
         public double? ValorDoIptu { get; set; }
 
         [Display(Name = "Cozinhas")]
@@ -68,7 +70,6 @@ namespace AlugaiWEB.Models
         public string Cidade { get; set; }
 
         [Display(Name = "Estado")]
-        [StringLength(45, MinimumLength = 5, ErrorMessage = "O valor deve ter entre 5 e 45 caracteres!!")]
         [Required(ErrorMessage = "Campo Obrigatório")]
         public string EstadoUf { get; set; }
 
